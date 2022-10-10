@@ -1,21 +1,31 @@
 package com.example.myapplication55;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.os.Handler;
+import android.os.Message;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class IntroductoryActivity extends AppCompatActivity {
-    ImageView logo, introback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introductory);
+        Timer timer=new Timer();
+        timer.schedule(new Task(), 3000);
 
-        logo=findViewById(R.id.logo);
-        introback=findViewById(R.id.introback);
-        logo.animate().translationY(-2600).setDuration(500).setStartDelay(3000);
-        introback.animate().translationY(2800).setDuration(500).setStartDelay(3000);
+    }
+    class Task extends TimerTask{
+        @Override
+        public void run() {
+            startActivity(new Intent(IntroductoryActivity.this, welcome.class));
+        }
     }
 
 }

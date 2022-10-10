@@ -16,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        PrefManager prefManager = new PrefManager(getApplicationContext());
+        if(prefManager.isFirstTimeLaunch()){
+            prefManager.setFirstTimeLaunch(false);
+            startActivity(new Intent(MainActivity.this, welcome.class));
+            finish();
+        }
         welcomePageButtons = findViewById(R.id.welcome_page_buttons);
 
         OnClick onClick = new OnClick();
