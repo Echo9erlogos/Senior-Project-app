@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "479914938859",
+    "project_id": "phys-therapy",
+    "storage_bucket": "phys-therapy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479914938859:android:0fd046dbfdc2319855c9ae",
+        "android_client_info": {
+          "package_name": "com.example.myapplication55"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479914938859-rq5r18i0d7ia353tuerhlemdqnrau9mc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication55",
+            "certificate_hash": "3324806adf60a3efd3e26d7ee66e3c327c160cbc"
+          }
+        },
+        {
+          "client_id": "479914938859-t8qpckd5ntnkeaku6koa5rbgbmq9grs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdOeDz7zbYt0_RcFcFQvL-h2d7XASdYok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479914938859-t8qpckd5ntnkeaku6koa5rbgbmq9grs2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
