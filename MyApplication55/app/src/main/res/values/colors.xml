@@ -10,4 +10,7 @@
     <color name="orange">#FFB20C</color>
     <color name="darkorange">#DE9B0B</color>
     <color name="lightgrey">#EAEAEA</color>
+    <color name="welcome_bg1">#7FE1F9</color>
+    <color name="welcome_bg2">#63CFF6</color>
+    <color name="welcome_bg3">#4DBFF1</color>
 </resources>
