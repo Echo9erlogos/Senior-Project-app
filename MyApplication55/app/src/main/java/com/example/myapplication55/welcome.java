@@ -24,7 +24,10 @@ public class welcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
-
+        if (!prefManager.isFirstTimeLaunch()) {
+            launchHomeScreen();
+            finish();
+        }
 
         setContentView(R.layout.activity_welcome);
         viewPager = (ViewPager) findViewById(R.id.welcome_pager);
