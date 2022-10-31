@@ -23,13 +23,9 @@ allprojects {
         //google()  // Google's Maven repository
 
 //        mavenCentral()  // Maven Central repository
-
-<<<<<<< Updated upstream
-=======
     }
 }
 
->>>>>>> Stashed changes
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
