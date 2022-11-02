@@ -1,9 +1,10 @@
-package com.example.myapplication55;
+package com.example.loginandregistration;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class SignUpPage extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
