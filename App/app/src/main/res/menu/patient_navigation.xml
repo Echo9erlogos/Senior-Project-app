@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/patient_navigation_home"
+        android:icon="@drawable/home_unpressed"
+        tools:ignore="MenuTitle">
+    </item>
+
+    <item
+        android:id="@+id/patient_navigation_chat"
+        android:icon="@drawable/chat_unpressed"
+        tools:ignore="MenuTitle">
+    </item>
+
+    <item
+        android:id="@+id/patient_navigation_therapist"
+        android:icon="@drawable/therapist_unpressed"
+        tools:ignore="MenuTitle">
+    </item>
+
+    <item
+        android:id="@+id/patient_navigation_appointment"
+        android:icon="@drawable/appointment_unpressed"
+        tools:ignore="MenuTitle">
+    </item>
+
+    <item
+        android:id="@+id/patient_navigation_profile"
+        android:icon="@drawable/profile_unpressed"
+        tools:ignore="MenuTitle">
+    </item>
+</menu>
