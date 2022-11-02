@@ -12,7 +12,7 @@ public class ProfilePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
+        setContentView(R.layout.activity_patient_profile_content);
         button=(Button)findViewById(R.id.edit);
         button.setOnClickListener(v -> {
             Intent intent = new Intent();

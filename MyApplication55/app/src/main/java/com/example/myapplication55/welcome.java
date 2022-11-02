@@ -1,15 +1,16 @@
 package com.example.myapplication55;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+
 import android.content.Context;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 
 public class welcome extends AppCompatActivity {
