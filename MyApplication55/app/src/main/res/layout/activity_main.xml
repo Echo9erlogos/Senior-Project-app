@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/therapist_background"
+    android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -49,10 +49,11 @@
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@color/cyan_blue"
+            android:textStyle="bold"
             android:tag="start"
             android:text="Get Start"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintCircleRadius="15dp" />
 
@@ -60,10 +61,11 @@
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@color/cyan_blue"
+            android:textStyle="bold"
             android:tag="login"
             android:text="Already have an account?"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="8sp"
             app:layout_constraintCircleRadius="15dp" />
     </LinearLayout>
