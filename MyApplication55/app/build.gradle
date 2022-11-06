@@ -41,12 +41,15 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //FIREBASE STUFF
-    implementation platform('com.google.firebase:firebase-bom:31.0.0')
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
 
     //Add dependencies for firebase products that we need to use
     //dont specify versions in firebase dependencies
 
     implementation 'com.google.firebase:firebase-analytics'
+
+    //Auth implementation
+    implementation 'com.google.firebase:firebase-auth'
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 }
