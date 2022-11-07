@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, LoginPage.class);
                     break;
                 case "start":
-                    intent = new Intent(MainActivity.this, SignUpPage.class);
+                    intent = new Intent(MainActivity.this, Signupchoice.class);
                     break;
                 default:
                     break;

@@ -52,7 +52,7 @@
             android:backgroundTint="@color/cyan_blue"
             android:textStyle="bold"
             android:tag="start"
-            android:text="Get Start"
+            android:text="Get Started"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintCircleRadius="15dp" />

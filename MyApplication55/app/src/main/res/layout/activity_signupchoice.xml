@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".signupchoice">
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up as a Patient or Therapist!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/patient"
+        android:layout_width="171dp"
+        android:layout_height="73dp"
+        android:backgroundTint="@color/cyan_blue"
+        android:tag="start"
+        android:text="I'm a Patient"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintCircleRadius="15dp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="340dp"
+        android:onClick="getInput"
+        />
+
+    <Button
+        android:id="@+id/therapist"
+        android:layout_width="172dp"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/cyan_blue"
+        android:tag="login"
+        android:text="I'm a Therapist"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintCircleRadius="15dp"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="247dp"
+        android:onClick="getInput"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
