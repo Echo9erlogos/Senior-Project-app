@@ -4,8 +4,9 @@ import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -57,6 +58,9 @@ public class SignUpPage extends AppCompatActivity {
                             FirebaseUser user = myAuth.getCurrentUser();
                             //updateUI(user);
                             //this is where we update to next screen with user info and profile
+                            Intent intent = null;
+                            intent = new Intent(SignUpPage.this, HomeActivity.class);
+                            startActivity(intent);
                         }
                         else{
                             //sign in fails
