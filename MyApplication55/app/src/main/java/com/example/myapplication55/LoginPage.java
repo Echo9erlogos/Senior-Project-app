@@ -3,6 +3,7 @@ package com.example.myapplication55;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +42,7 @@ public class LoginPage extends AppCompatActivity {
         //check if user is already signed in
         FirebaseUser currUser = myAuth.getCurrentUser();
         if(currUser != null){
-            Log.d(TAG, "signINWithEmail:success");
+            Log.d(TAG, "signINWithEmail:success__________________________________________");
             //reload(); here just load to homepage with user data might move this to an earlier screen as having the app check here is not useful tbh
         }
     }
@@ -56,6 +57,7 @@ public class LoginPage extends AppCompatActivity {
                         Log.d(TAG, "signINWithEmail:success");
                         FirebaseUser user = myAuth.getCurrentUser();
                         //update UI to go to home page
+                            startActivity(new Intent(LoginPage.this, HomeActivity.class));
 
                         }else{
                             //sign in fails

@@ -52,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:text="PROFILE" />
+            android:text="PROFILE"
+            android:onClick="signOut"/>
 
     </RadioGroup>
 
