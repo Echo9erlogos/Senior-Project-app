@@ -82,6 +82,7 @@ public class SignUpPage extends AppCompatActivity {
         genderInput = findViewById(R.id.gender);
         repassInput = findViewById(R.id.repassword);
         errorText = findViewById(R.id.bannerDescription);
+
         //convert amd save to local vars
         email = emailInput.getText().toString();
         password = passwordInput.getText().toString();
