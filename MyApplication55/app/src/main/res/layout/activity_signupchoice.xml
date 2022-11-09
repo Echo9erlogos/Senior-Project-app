@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:id="@+id/sign_up_choice_page_buttons"
     tools:context=".Signupchoice">
 
     <TextView
@@ -24,6 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+
         android:id="@+id/patient"
         android:layout_width="171dp"
         android:layout_height="73dp"
