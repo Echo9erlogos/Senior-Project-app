@@ -6,8 +6,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class Signupchoice extends AppCompatActivity {
@@ -32,7 +30,7 @@ public class Signupchoice extends AppCompatActivity {
                 Intent intent = null;
                 switch (v.getTag().toString()) {
                    case "patient":
-                        intent = new Intent(Signupchoice.this, SignUpPage.class);
+                        intent = new Intent(Signupchoice.this, PatientSignup.class);
                         break;
                     case "therapist":
                         intent = new Intent(Signupchoice.this, TherapistSignup.class);

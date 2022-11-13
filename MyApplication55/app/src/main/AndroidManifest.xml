@@ -55,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpPage"
+            android:name=".PatientSignup"
             android:exported="false" />
         <activity
             android:name=".LoginPage"

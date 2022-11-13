@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
 
-public class SignUpPage extends AppCompatActivity {
+public class PatientSignup extends AppCompatActivity {
     String email, password, name,gender,repass;
     EditText emailInput, passwordInput, nameInput, genderInput, repassInput;
     TextView errorText;
@@ -33,7 +33,7 @@ public class SignUpPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signuppage);
+        setContentView(R.layout.activity_patient_signup);
 
         myAuth = FirebaseAuth.getInstance();
     }
@@ -59,13 +59,13 @@ public class SignUpPage extends AppCompatActivity {
                             //updateUI(user);
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(SignUpPage.this, HomeActivity.class);
+                            intent = new Intent(PatientSignup.this, HomeActivity.class);
                             startActivity(intent);
                         }
                         else{
                             //sign in fails
                             Log.w(TAG,"createUserWithEmail:failure",task.getException());
-                            Toast.makeText(SignUpPage.this, "Authentication failed.",
+                            Toast.makeText(PatientSignup.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                             //won't update since this failed and user will need to retry
