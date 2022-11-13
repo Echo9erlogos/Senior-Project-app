@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class EditTherapistPrifilePage extends AppCompatActivity {
+public class Therapist_ProfilePage_Activity extends AppCompatActivity {
     Button button=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_therapist_prifile_page);
-        button=(Button)findViewById(R.id.save);
+        setContentView(R.layout.activity_therapist_profilepage);
+        button=(Button)findViewById(R.id.edit);
         button.setOnClickListener(v -> {
             Intent intent = new Intent();
-            intent.setClass(EditTherapistPrifilePage.this, TherapistProfilePage.class);
+            intent.setClass(Therapist_ProfilePage_Activity.this, EditTherapistProfilePage.class);
             startActivity(intent);
         });
     }

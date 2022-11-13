@@ -59,7 +59,7 @@ public class PatientSignup extends AppCompatActivity {
                             //updateUI(user);
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(PatientSignup.this, HomeActivity.class);
+                            intent = new Intent(PatientSignup.this, Patient_HomePage_Activity.class);
                             startActivity(intent);
                         }
                         else{

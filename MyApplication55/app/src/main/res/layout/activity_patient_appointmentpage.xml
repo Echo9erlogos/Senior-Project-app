@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient_AppointmentPage_Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Appointment System is still in progress. Thank you for your patience"
+        android:textSize="60dp"
+        tools:ignore="HardcodedText,MissingConstraints">
+
+    </TextView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/patient_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/patient_navigation" />
+</androidx.constraintlayout.widget.ConstraintLayout>
