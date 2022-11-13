@@ -28,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".IntroductoryActivity"
+            android:name=".Patient_HomePage_Activity"
             android:exported="false" />
         <activity
             android:name=".Patient_AppointmentPage_Activity"
@@ -46,6 +46,18 @@
             android:name=".EditPatientProfilePage"
             android:exported="false" />
         <activity
+            android:name=".Therapist_HomePage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_AppointmentPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_ChatPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_PatientPage_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Therapist_ProfilePage_Activity"
             android:exported="false" />
         <activity
@@ -55,7 +67,7 @@
             android:name=".welcome"
             android:exported="false" />
         <activity
-            android:name=".Patient_HomePage_Activity"
+            android:name=".IntroductoryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
