@@ -57,7 +57,7 @@ public class LoginPage extends AppCompatActivity {
                         Log.d(TAG, "signINWithEmail:success");
                         FirebaseUser user = myAuth.getCurrentUser();
                         //update UI to go to home page
-                            startActivity(new Intent(LoginPage.this, HomeActivity.class));
+                            startActivity(new Intent(LoginPage.this, Patient_HomePage_Activity.class));
 
                         }else{
                             //sign in fails

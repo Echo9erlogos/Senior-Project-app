@@ -15,7 +15,7 @@ public class EditPatientProfilePage extends AppCompatActivity {
         button=(Button)findViewById(R.id.save);
         button.setOnClickListener(v -> {
             Intent intent = new Intent();
-            intent.setClass(EditPatientProfilePage.this, PatientProfilePage.class);
+            intent.setClass(EditPatientProfilePage.this, Patient_ProfilePage_Activity.class);
             startActivity(intent);
         });
     }

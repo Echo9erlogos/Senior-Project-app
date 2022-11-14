@@ -80,7 +80,7 @@ public class welcome extends AppCompatActivity {
         if(currUser != null){
             Log.d(TAG, "signINWithEmail:success____________________________________");
             //reload(); here just load to homepage with user data might move this to an earlier screen as having the app check here is not useful tbh
-            startActivity(new Intent(welcome.this, HomeActivity.class));
+            startActivity(new Intent(welcome.this, Patient_HomePage_Activity.class));
         }
     }
     private int getItem(int i) {
