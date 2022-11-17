@@ -15,7 +15,7 @@ public class Patient_ProfilePage_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_profilepage);
+        setContentView(R.layout.activity_patient_profile_page);
         button=(Button)findViewById(R.id.edit);
         button.setOnClickListener(v -> {
             Intent intent = new Intent();

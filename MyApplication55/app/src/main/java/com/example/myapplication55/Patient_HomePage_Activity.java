@@ -4,18 +4,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class Patient_HomePage_Activity extends AppCompatActivity{
+public class Patient_HomePage_Activity extends FirebaseAuthMethods{
+
+    TextView nameText;
+    boolean reload = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_homepage);
+
+        setName();
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.patient_bottom_navigation);
 
@@ -28,12 +34,14 @@ public class Patient_HomePage_Activity extends AppCompatActivity{
                     case R.id.patient_navigation_home:
                         return true;
                     case R.id.patient_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Patient_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
+                        signOut();
+                        //startActivity(new Intent(getApplicationContext(), Patient_ChatPage_Activity.class));
+                        //overridePendingTransition(0, 0);
                         return true;
                     case R.id.patient_navigation_therapist:
-                        startActivity(new Intent(getApplicationContext(), Patient_TherapistPage_Activity.class));
-                        overridePendingTransition(0, 0);
+                        deleteUser();
+                        //startActivity(new Intent(getApplicationContext(), Patient_TherapistPage_Activity.class));
+                        //overridePendingTransition(0, 0);
                         return true;
                     case R.id.patient_navigation_appointment:
                         startActivity(new Intent(getApplicationContext(), Patient_AppointmentPage_Activity.class));
@@ -47,11 +55,18 @@ public class Patient_HomePage_Activity extends AppCompatActivity{
                 return false;
             }
         });
+    }/*
+    @Override
+    public void onStart(){
+        super.onStart();
+
+            setName();
+
+
     }
-    public void signOut(View view) {
-        // [START auth_sign_out]
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(Patient_HomePage_Activity.this, MainActivity.class));
-        // [END auth_sign_out]
+    */
+    public void setName(){
+        nameText = findViewById(R.id.UserWelcome);
+        nameText.setText("Hi, "+getNameFBAuth());
     }
 }

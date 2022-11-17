@@ -21,7 +21,7 @@ import java.io.IOException;
 
 public class LoginPage extends AppCompatActivity {
 
-    private static final String TAG = "EmailPassword";
+    private static final String TAG = "_EmailPassword_";
 
     private FirebaseAuth myAuth;
 
@@ -42,7 +42,7 @@ public class LoginPage extends AppCompatActivity {
         //check if user is already signed in
         FirebaseUser currUser = myAuth.getCurrentUser();
         if(currUser != null){
-            Log.d(TAG, "signINWithEmail:success__________________________________________");
+            Log.d(TAG, "__________________________________________signINWithEmail:success__________________________________________");
             //reload(); here just load to homepage with user data might move this to an earlier screen as having the app check here is not useful tbh
         }
     }
@@ -54,14 +54,14 @@ public class LoginPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task){
                         if(task.isSuccessful()){
                         //sign in success
-                        Log.d(TAG, "signINWithEmail:success");
+                        Log.d(TAG, "__________________________________________signINWithEmail:success__________________________________________");
                         FirebaseUser user = myAuth.getCurrentUser();
                         //update UI to go to home page
                             startActivity(new Intent(LoginPage.this, Patient_HomePage_Activity.class));
 
                         }else{
                             //sign in fails
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Log.w(TAG, "__________________________________________signInWithEmail:failure__________________________________________", task.getException());
                             Toast.makeText(LoginPage.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             //dont update ui user auth failed they should try again

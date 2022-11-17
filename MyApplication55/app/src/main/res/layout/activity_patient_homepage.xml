@@ -7,7 +7,7 @@
     tools:context=".Patient_HomePage_Activity">
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/UserWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hi, User's Name"
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@+id/UserWelcome" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/patient_bottom_navigation"
