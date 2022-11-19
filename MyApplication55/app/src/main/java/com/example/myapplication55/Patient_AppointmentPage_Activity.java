@@ -19,6 +19,7 @@ public class Patient_AppointmentPage_Activity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_appointmentpage);
 
