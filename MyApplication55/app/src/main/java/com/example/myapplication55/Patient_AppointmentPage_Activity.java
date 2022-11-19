@@ -6,10 +6,17 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication55.adapter.FirebaseDatabaseHelper;
+import com.example.myapplication55.adapter.RecycleAdapter;
+import com.example.myapplication55.model.Info;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.List;
+
 public class Patient_AppointmentPage_Activity extends AppCompatActivity {
+    private RecyclerView mRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,28 @@ public class Patient_AppointmentPage_Activity extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+        mRecyclerView=(RecyclerView) findViewById(R.id.therapistlist);
+        new FirebaseDatabaseHelper().readInfos(new FirebaseDatabaseHelper.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<Info> Infos, List<String> keys) {
+                new RecycleAdapter().setConfig(mRecyclerView,Patient_AppointmentPage_Activity.this,Infos,keys);
+            }
+
+            @Override
+            public void DataIsInserted() {
+
+            }
+
+            @Override
+            public void DataIsUpdated() {
+
+            }
+
+            @Override
+            public void DataIsDeleted() {
+
             }
         });
     }
