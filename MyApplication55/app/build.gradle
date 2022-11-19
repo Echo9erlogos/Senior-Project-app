@@ -49,7 +49,7 @@ dependencies {
     //dont specify versions in firebase dependencies
 
     implementation 'com.google.firebase:firebase-analytics'
-
+    implementation'com.google.firebase:firebase-core:21.1.1'
     //Auth implementation
     implementation 'com.google.firebase:firebase-auth'
     // Add the dependencies for any other desired Firebase products
