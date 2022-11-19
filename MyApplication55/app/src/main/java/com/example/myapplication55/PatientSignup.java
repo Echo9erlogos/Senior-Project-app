@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
 
-public class SignUpPage extends AppCompatActivity {
+public class PatientSignup extends FirebaseAuthMethods {
     String email, password, name,gender,repass;
     EditText emailInput, passwordInput, nameInput, genderInput, repassInput;
     TextView errorText;
@@ -33,7 +33,7 @@ public class SignUpPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_patient_signup);
 
         myAuth = FirebaseAuth.getInstance();
     }
@@ -53,19 +53,21 @@ public class SignUpPage extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            setupProfile(name);
                             //sign in success
                             Log.d(TAG,"createUserWithEmail:success");
                             FirebaseUser user = myAuth.getCurrentUser();
                             //updateUI(user);
+
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(SignUpPage.this, HomeActivity.class);
+                            intent = new Intent(PatientSignup.this, Patient_HomePage_Activity.class);
                             startActivity(intent);
                         }
                         else{
                             //sign in fails
                             Log.w(TAG,"createUserWithEmail:failure",task.getException());
-                            Toast.makeText(SignUpPage.this, "Authentication failed.",
+                            Toast.makeText(PatientSignup.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                             //won't update since this failed and user will need to retry
@@ -82,10 +84,13 @@ public class SignUpPage extends AppCompatActivity {
         genderInput = findViewById(R.id.gender);
         repassInput = findViewById(R.id.repassword);
         errorText = findViewById(R.id.bannerDescription);
+
         //convert amd save to local vars
         email = emailInput.getText().toString();
         password = passwordInput.getText().toString();
         repass = repassInput.getText().toString();
+        name = nameInput.getText().toString();
+        gender = genderInput.getText().toString();
 
         //check if password is valid/matches
         if(!password.equals(repass)){

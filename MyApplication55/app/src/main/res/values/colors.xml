@@ -14,4 +14,7 @@
     <color name="welcome_bg2">#63CFF6</color>
     <color name="welcome_bg3">#4DBFF1</color>
     <color name="cyan_blue">#03DAC6</color>
+    <color name="lavender_purple">#6574CF</color>
+    <color name="light_lavender_purple">#6D7BD1</color>
+    <color name="light_gray">#DADBE2</color>
 </resources>

@@ -14,19 +14,61 @@
         android:theme="@style/Theme.MyApplication55"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
-            android:exported="false"/>
+            android:name=".Confirmationpage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".EditTherapistPrifilePage"
+            android:name=".TherapistSignup"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Signupchoice"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Patient_HomePage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Patient_AppointmentPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Patient_ChatPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Patient_TherapistPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".EditTherapistProfilePage"
             android:exported="false" />
         <activity
             android:name=".EditPatientProfilePage"
             android:exported="false" />
         <activity
-            android:name=".TherapistProfilePage"
+            android:name=".Therapist_HomePage_Activity"
             android:exported="false" />
         <activity
-            android:name=".PatientProfilePage"
+            android:name=".Therapist_AppointmentPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_ChatPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_PatientPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_ProfilePage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Patient_ProfilePage_Activity"
             android:exported="false" />
         <activity
             android:name=".welcome"
@@ -41,19 +83,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpPage"
+            android:name=".PatientSignup"
             android:exported="false" />
         <activity
             android:name=".LoginPage"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfilePage"
-            android:exported="false" />
-        <activity
-            android:name=".EditProfilePage"
             android:exported="false" />
     </application>
 
