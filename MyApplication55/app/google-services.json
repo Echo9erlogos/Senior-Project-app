@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "479914938859",
+    "firebase_url": "https://phys-therapy-default-rtdb.firebaseio.com",
     "project_id": "phys-therapy",
     "storage_bucket": "phys-therapy.appspot.com"
   },
