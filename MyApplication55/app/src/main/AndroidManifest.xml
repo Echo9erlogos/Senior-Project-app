@@ -42,7 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".Patient_HomePage_Activity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Patient_ProfilePage_Activity"
             android:exported="false" />
