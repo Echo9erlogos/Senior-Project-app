@@ -34,12 +34,10 @@ public class Patient_HomePage_Activity extends FirebaseAuthMethods{
                     case R.id.patient_navigation_home:
                         return true;
                     case R.id.patient_navigation_chat:
-
                         startActivity(new Intent(getApplicationContext(), Patient_ChatPage_Activity.class));
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.patient_navigation_therapist:
-
                         startActivity(new Intent(getApplicationContext(), Patient_TherapistPage_Activity.class));
                         overridePendingTransition(0, 0);
                         return true;

@@ -1,17 +1,18 @@
 package com.example.myapplication55;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Patient_ProfilePage_Activity extends AppCompatActivity {
+public class Patient_ProfilePage_Activity extends FirebaseAuthMethods {
     Button button=null;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,10 @@ public class Patient_ProfilePage_Activity extends AppCompatActivity {
             intent.setClass(Patient_ProfilePage_Activity.this,EditPatientProfilePage.class);
             startActivity(intent);
         });
-
+        btn=(Button)findViewById(R.id.patient_signout_button);
+        btn.setOnClickListener(v -> {
+            signOut();
+        });
         BottomNavigationView bottomNavigationView=findViewById(R.id.patient_bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.patient_navigation_profile);
@@ -54,4 +58,5 @@ public class Patient_ProfilePage_Activity extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -177,4 +177,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/patient_navigation" />
 
+    <Button
+        android:id="@+id/patient_signout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignOut"
+        app:layout_constraintEnd_toEndOf="@+id/textintroduce"
+        app:layout_constraintTop_toTopOf="@+id/edit" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

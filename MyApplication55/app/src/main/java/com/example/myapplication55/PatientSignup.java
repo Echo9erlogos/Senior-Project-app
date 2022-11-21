@@ -14,11 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //firebase imports
+import com.example.myapplication55.adapter.FirebaseDatabaseHelper;
+import com.example.myapplication55.model.PatientModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 
@@ -53,6 +56,12 @@ public class PatientSignup extends FirebaseAuthMethods {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            final String uid=FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            PatientModel patientModel=new PatientModel();
+                            patientModel.pname=name;
+                            patientModel.gender=gender;
+                            patientModel.email=email;
+                            patientModel.uid=uid;
                             setupProfile(name);
                             //sign in success
                             Log.d(TAG,"createUserWithEmail:success");
@@ -63,6 +72,7 @@ public class PatientSignup extends FirebaseAuthMethods {
                             Intent intent = null;
                             intent = new Intent(PatientSignup.this, Patient_HomePage_Activity.class);
                             startActivity(intent);
+                            FirebaseDatabase.getInstance().getReference().child("patient").child(uid).setValue(patientModel);
                         }
                         else{
                             //sign in fails

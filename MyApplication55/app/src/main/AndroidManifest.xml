@@ -36,7 +36,7 @@
             android:exported="false" />
         <activity
             android:name=".Patient_AppointmentPage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Patient_ChatPage_Activity"
             android:exported="false" />
