@@ -105,7 +105,7 @@
         android:textColor="@color/white"
         android:text="How many years have you been a therapist"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttimes" />
+        app:layout_constraintTop_toBottomOf="@+id/textnumoftreat" />
 
     <TextView
         android:id="@+id/textView14"
@@ -150,7 +150,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textintroduce" />
 
     <TextView
-        android:id="@+id/textcity"
+        android:id="@+id/textexp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -167,7 +167,7 @@
         android:layout_marginTop="10dp"
         android:text="-"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textcity" />
+        app:layout_constraintTop_toBottomOf="@+id/textexp" />
 
     <TextView
         android:id="@+id/textstreet"
@@ -210,7 +210,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/texttimes"
+        android:id="@+id/textnumoftreat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"

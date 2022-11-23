@@ -74,7 +74,7 @@
             android:name=".Therapist_ProfilePage_Activity"
             android:exported="false" />
         <activity
-            android:name=".TherapistProfileViewPage"
+            android:name=".Patient_View_TherapistInfo_Activity"
             android:exported="false" />
         <activity
             android:name=".TherapistSignup"

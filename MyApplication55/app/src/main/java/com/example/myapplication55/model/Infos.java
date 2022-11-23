@@ -1,12 +1,12 @@
 package com.example.myapplication55.model;
 
-public class Info {
+public class Infos {
     private String name;
     private String city;
     private String score;
-    public Info(){}
+    public Infos(){}
 
-    public Info(String name, String city, String score){
+    public Infos(String name, String city, String score){
         this.name=name;
         this.city=city;
         this.score=score;

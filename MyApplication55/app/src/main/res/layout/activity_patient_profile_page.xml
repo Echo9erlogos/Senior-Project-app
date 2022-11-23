@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textemail" />
 
     <TextView
-        android:id="@+id/textcity"
+        android:id="@+id/textexp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -124,7 +124,7 @@
         android:layout_marginTop="10dp"
         android:text="-"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textcity" />
+        app:layout_constraintTop_toBottomOf="@+id/textexp" />
 
     <TextView
         android:id="@+id/textstreet"

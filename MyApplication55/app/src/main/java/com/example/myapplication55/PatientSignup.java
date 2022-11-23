@@ -3,7 +3,6 @@ package com.example.myapplication55;
 import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //firebase imports
-import com.example.myapplication55.adapter.FirebaseDatabaseHelper;
 import com.example.myapplication55.model.PatientModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
