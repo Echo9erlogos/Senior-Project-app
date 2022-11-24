@@ -54,6 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:20.1.0'
     //Auth implementation
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.firebaseui:firebase-ui-database:0.4.3'
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 }

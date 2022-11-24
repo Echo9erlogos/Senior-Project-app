@@ -1,5 +1,6 @@
 package com.example.myapplication55;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -79,7 +80,7 @@ public class Patient_AppointmentPage_Activity extends AppCompatActivity {
         options=new FirebaseRecyclerOptions.Builder<Infos>().setQuery(DataRef, Infos.class).build();
         adapter=new FirebaseRecyclerAdapter<Infos, MyViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Infos model) {
+            protected void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Infos model) {
                 holder.textname.setText(model.getName());
                 holder.textscore.setText(model.getScore());
                 holder.textcity.setText(model.getCity());
