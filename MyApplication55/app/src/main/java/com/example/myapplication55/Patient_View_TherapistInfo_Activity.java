@@ -72,15 +72,16 @@ public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
         }
     }
     private class OnClick implements View.OnClickListener {
+        String therapistKey=getIntent().getStringExtra("therapistKey");
         @Override
         public void onClick(View v) {
             Intent intent = null;
             switch (v.getId()) {
                 case R.id.back:
                     intent = new Intent(Patient_View_TherapistInfo_Activity.this, Patient_AppointmentPage_Activity.class);
-                    break;
                 case R.id.schedule:
                     intent = new Intent(Patient_View_TherapistInfo_Activity.this, ReservationInformationEditPage.class);
+                    intent.putExtra("therapistKey", therapistKey);
                     break;
                 default:
                     break;

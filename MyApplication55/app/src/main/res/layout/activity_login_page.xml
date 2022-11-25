@@ -127,14 +127,25 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
+    <CheckBox
+        android:id="@+id/therapist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Therapist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
-
-
-
-
-
-
-
+    <CheckBox
+        android:id="@+id/patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Patient"
+        app:layout_constraintStart_toEndOf="@+id/therapist"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

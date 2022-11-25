@@ -1,12 +1,12 @@
 package com.example.myapplication55;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Signupchoice extends AppCompatActivity {
     ConstraintLayout SignUpChoicePageButtons;
@@ -24,7 +24,7 @@ public class Signupchoice extends AppCompatActivity {
         }
         }
 
-        class OnClick implements View.OnClickListener {
+       private class OnClick implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 Intent intent = null;

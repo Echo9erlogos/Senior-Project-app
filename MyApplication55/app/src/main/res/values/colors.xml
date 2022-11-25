@@ -17,4 +17,6 @@
     <color name="lavender_purple">#6574CF</color>
     <color name="light_lavender_purple">#6D7BD1</color>
     <color name="light_gray">#DADBE2</color>
+    <color name="darkGray">#333533</color>
+    <color name="lightGray">#EEE</color>
 </resources>

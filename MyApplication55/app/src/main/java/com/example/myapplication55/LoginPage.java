@@ -1,16 +1,16 @@
 package com.example.myapplication55;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-//firebase imports
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -20,7 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 import java.io.IOException;
 
 public class LoginPage extends AppCompatActivity {
-
+    private CheckBox therapist;
+    private CheckBox patient;
     private static final String TAG = "_EmailPassword_";
 
     private FirebaseAuth myAuth;
@@ -32,7 +33,8 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-
+        therapist=findViewById(R.id.therapist);
+        patient=findViewById(R.id.patient);
         //init auth
         myAuth = FirebaseAuth.getInstance();
     }
@@ -49,25 +51,38 @@ public class LoginPage extends AppCompatActivity {
 
     private void signIn(String email,String password){
         myAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task){
-                        if(task.isSuccessful()){
-                        //sign in success
-                        Log.d(TAG, "__________________________________________signINWithEmail:success__________________________________________");
-                        FirebaseUser user = myAuth.getCurrentUser();
-                        //update UI to go to home page
-                            startActivity(new Intent(LoginPage.this, Patient_HomePage_Activity.class));
+                .addOnCompleteListener(this,
+                        new OnCompleteListener<AuthResult>(){
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task){
+                                if(task.isSuccessful()==true){
+                                    //sign in success
+                                    Log.d(TAG, "__________________________________________signINWithEmail:success__________________________________________");
+                                    FirebaseUser user = myAuth.getCurrentUser();
+                                    //update UI to go to home page
+                                    if(therapist.isChecked()&&patient.isChecked()){
+                                        Toast.makeText(LoginPage.this,"please choose one",Toast.LENGTH_SHORT).show();
+                                    }
+                                    if(therapist.isChecked()==false&&patient.isChecked()==false){
+                                        Toast.makeText(LoginPage.this,"please choose one!",Toast.LENGTH_SHORT).show();
+                                    }
+                                    if(therapist.isChecked()&&patient.isChecked()==false){
+                                        startActivity(new Intent(LoginPage.this, Therapist_HomePage_Activity.class));
+                                    }
+                                    if(patient.isChecked()&&therapist.isChecked()==false){
+                                        startActivity(new Intent(LoginPage.this, Patient_HomePage_Activity.class));
+                                    }
 
-                        }else{
-                            //sign in fails
-                            Log.w(TAG, "__________________________________________signInWithEmail:failure__________________________________________", task.getException());
-                            Toast.makeText(LoginPage.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            //dont update ui user auth failed they should try again
+
+                            }if(task.isSuccessful()==false){
+                                //sign in fails
+                                Log.w(TAG, "__________________________________________signInWithEmail:failure__________________________________________", task.getException());
+                                Toast.makeText(LoginPage.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                //dont update ui user auth failed they should try again
+                            }
                         }
-                    }
-                 });
+    });
     }
 
     //get inputs method

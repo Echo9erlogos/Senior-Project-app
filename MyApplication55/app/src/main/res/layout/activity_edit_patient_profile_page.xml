@@ -8,7 +8,7 @@
     tools:context=".EditPatientProfilePage">
 
     <TextView
-        android:id="@+id/displayname"
+        android:id="@+id/displaynamep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editname"
+        android:id="@+id/editnamep"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -32,7 +32,7 @@
         android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayname" />
+        app:layout_constraintTop_toBottomOf="@+id/displaynamep" />
 
     <TextView
         android:id="@+id/textView17"
@@ -44,10 +44,10 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/editname" />
+        app:layout_constraintTop_toBottomOf="@+id/editnamep" />
 
     <EditText
-        android:id="@+id/editcity"
+        android:id="@+id/editcityp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editstate"
+        android:id="@+id/editstatep"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editstreet"
+        android:id="@+id/editstreetp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -89,7 +89,7 @@
         android:inputType="textPostalAddress"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editcity" />
+        app:layout_constraintTop_toBottomOf="@+id/editcityp" />
 
     <TextView
         android:id="@+id/textView18"
@@ -101,16 +101,16 @@
         android:textColor="@color/white"
         android:text="Year of Birth"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editstreet" />
+        app:layout_constraintTop_toBottomOf="@+id/editstreetp" />
 
     <EditText
-        android:id="@+id/editbirth"
+        android:id="@+id/editbirthp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:ems="10"
         android:hint="XXXX"
-        android:inputType="date"
+        android:inputType="textPostalAddress"
         android:minHeight="48dp"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -128,12 +128,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <EditText
-        android:id="@+id/editphone"
+        android:id="@+id/editphonep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="phone"
+        android:inputType="textPostalAddress"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:minHeight="48dp"
@@ -141,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/savep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -152,7 +152,7 @@
         android:textColor="@color/white"
         app:layout_constraintCircleRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editintroduce" />
+        app:layout_constraintTop_toBottomOf="@+id/editintroducep" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -165,7 +165,7 @@
         app:srcCompat="@drawable/ic_twotone_local_phone_24" />
 
     <EditText
-        android:id="@+id/editintroduce"
+        android:id="@+id/editintroducep"
         android:layout_width="329dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -178,53 +178,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/ic_twotone_email_24" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Introduction"
-        android:textStyle="bold"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-    <EditText
-        android:id="@+id/editemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="email"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/editphone" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:minHeight="48dp"
-        android:text="Hide"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editbirth"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/editphonep" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -233,7 +197,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editname"
+        app:layout_constraintTop_toBottomOf="@+id/editnamep"
         app:srcCompat="@drawable/ic_twotone_location_on_24" />
 
     <ImageView

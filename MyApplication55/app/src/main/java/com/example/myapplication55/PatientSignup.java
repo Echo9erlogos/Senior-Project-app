@@ -2,8 +2,6 @@ package com.example.myapplication55;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//firebase imports
+import androidx.annotation.NonNull;
+
 import com.example.myapplication55.model.PatientModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -60,6 +59,12 @@ public class PatientSignup extends FirebaseAuthMethods {
                             patientModel.gender=gender;
                             patientModel.email=email;
                             patientModel.uid=uid;
+                            patientModel.age="-";
+                            patientModel.city="-";
+                            patientModel.state="-";
+                            patientModel.street="-";
+                            patientModel.phone="-";
+                            patientModel.condition="-";
                             setupProfile(name);
                             //sign in success
                             Log.d(TAG,"createUserWithEmail:success");
