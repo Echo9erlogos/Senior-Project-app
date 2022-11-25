@@ -2,6 +2,7 @@ package com.example.myapplication55;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,7 +15,8 @@ import android.widget.TimePicker;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.google.firebase.database.DatabaseReference;
+import com.example.myapplication55.model.appointmentInfos;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
@@ -23,19 +25,22 @@ import java.util.TimeZone;
 
 public class ReservationInformationEditPage extends AppCompatActivity {
     ConstraintLayout viewPageButtons;
-    private DatabaseReference rootDatabaseref;
     TextView date;
     TextView time;
     Button back;
     Button send;
     DatePickerDialog.OnDateSetListener datesetListener;
     TimePickerDialog.OnTimeSetListener timeSetListener;
+    final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservation_information_edit_page);
+        String therapistKey=getIntent().getStringExtra("therapistKey");
+        String therapistname=getIntent().getStringExtra("therapistname");
+
         viewPageButtons = findViewById(R.id.buttonlists);
 
 
@@ -89,14 +94,28 @@ time.setOnClickListener(new View.OnClickListener() {
         timePickerDialog.show();
     }
 });
-rootDatabaseref= FirebaseDatabase.getInstance().getReference().child("appointment").child("123");
+
 send.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        appointmentInfos appointmentInfos=new appointmentInfos();
         String datetxt=date.getText().toString();
         String timetxt=time.getText().toString();
-
-        rootDatabaseref.setValue(datetxt);
+        appointmentInfos.date=datetxt;
+        appointmentInfos.time=timetxt;
+        appointmentInfos.patientuid=uid;
+        appointmentInfos.therapistuid=therapistKey;
+        appointmentInfos.therapistname=therapistname;
+        appointmentInfos.state="pending";
+        FirebaseDatabase.getInstance().getReference().child("patientappointment").child(uid).setValue(appointmentInfos);
+        FirebaseDatabase.getInstance().getReference().child("docappointment").child(therapistKey).setValue(appointmentInfos);
+        startActivity(new Intent(ReservationInformationEditPage.this,Patient_TherapistPage_Activity.class));
+    }
+});
+back.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(ReservationInformationEditPage.this,Patient_AppointmentPage_Activity.class));
     }
 });
     }

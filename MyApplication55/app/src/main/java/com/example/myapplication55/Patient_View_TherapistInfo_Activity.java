@@ -80,8 +80,10 @@ public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
                 case R.id.back:
                     intent = new Intent(Patient_View_TherapistInfo_Activity.this, Patient_AppointmentPage_Activity.class);
                 case R.id.schedule:
+                    String therapistname=tname.getText().toString();
                     intent = new Intent(Patient_View_TherapistInfo_Activity.this, ReservationInformationEditPage.class);
                     intent.putExtra("therapistKey", therapistKey);
+                    intent.putExtra("therapistname",therapistname);
                     break;
                 default:
                     break;
