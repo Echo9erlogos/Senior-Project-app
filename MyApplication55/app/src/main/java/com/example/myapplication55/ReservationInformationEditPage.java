@@ -27,6 +27,7 @@ public class ReservationInformationEditPage extends AppCompatActivity {
     ConstraintLayout viewPageButtons;
     TextView date;
     TextView time;
+    TextView distherapistname;
     Button back;
     Button send;
     DatePickerDialog.OnDateSetListener datesetListener;
@@ -43,6 +44,8 @@ public class ReservationInformationEditPage extends AppCompatActivity {
 
         viewPageButtons = findViewById(R.id.buttonlists);
 
+        distherapistname=findViewById(R.id.name);
+        distherapistname.setText(therapistname);
 
         date = findViewById(R.id.date);
         time = findViewById(R.id.time);
