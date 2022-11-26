@@ -74,61 +74,8 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
             }
         });
     }
-    private void LoadData(){
-        options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayTherapist>().setQuery(DataRef,appointmentinfodisplayTherapist.class).build();
-        adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayTherapist, DisplayAdapterPending>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull DisplayAdapterPending holder, int position, @NonNull appointmentinfodisplayTherapist model) {
-                holder.textpatientname.setText(model.getPatientname());
-                holder.textaddress.setText(model.getAddress());
-                holder.textdate.setText(model.getDate());
-                holder.texttime.setText(model.getTime());
-                holder.textphone.setText(model.getPhone());
-                holder.textemail.setText(model.getEmail());
-                holder.textcondition.setText(model.getCondition());
-                holder.reject.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        DataRef.child(model.getPatientuid()).removeValue();
-                        DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
-                        HashMap hashMap=new HashMap();
-                        hashMap.put("state","be rejected");
-                        DataRef2.updateChildren(hashMap);
-                    }
-                });
-                holder.confirm.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        appointmentInfos appointmentInfo=new appointmentInfos();
-                        appointmentInfo.date=model.getDate();
-                        appointmentInfo.time=model.getTime();
-                        appointmentInfo.patientuid=model.getPatientuid();
-                        appointmentInfo.therapistuid=uid;
-                        appointmentInfo.patientname=model.getPatientname();
-                        appointmentInfo.address=model.getAddress();
-                        appointmentInfo.phone=model.getPhone();
-                        appointmentInfo.email=model.getEmail();
-                        appointmentInfo.condition=model.getCondition();
-                        FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid).child(model.getPatientuid()).setValue(appointmentInfo);
-                        DataRef.child(model.getPatientuid()).removeValue();
-                        DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
-                        HashMap hashMap=new HashMap();
-                        hashMap.put("state","be accepted");
-                        DataRef2.updateChildren(hashMap);
-                    }
-                });
-            }
 
-            @NonNull
-            @Override
-            public DisplayAdapterPending onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.therapist_pending_appointment,parent,false);
-                return new DisplayAdapterPending(v);
-            }
-        };
-    }
-
-    /*private void LoadData() {
+    private void LoadData() {
         options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayTherapist>().setQuery(DataRef,appointmentinfodisplayTherapist.class).build();
         adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayTherapist, DisplayAdapterPending>(options) {
             @Override
@@ -182,5 +129,5 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
         };
         adapter.startListening();
         mRecyclerView.setAdapter(adapter);
-    }*/
+    }
 }
