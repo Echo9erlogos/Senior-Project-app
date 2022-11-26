@@ -1,21 +1,37 @@
 package com.example.myapplication55;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
-public class Therapist_ProfilePage_Activity extends AppCompatActivity {
+public class Therapist_ProfilePage_Activity extends FirebaseAuthMethods {
     Button button=null;
+    Button btn;
+    private TextView city;
+    private TextView state;
+    private TextView street;
+    private TextView score;
+    private TextView year;
+    private TextView phone;
+    private TextView email;
+    final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
+    private DatabaseReference rootDatabaseref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_therapist_profilepage);
+        setContentView(R.layout.activity_therapist_profile_page);
+        btn=findViewById(R.id.signout);
+        btn.setOnClickListener(v -> {
+            signOut();
+        });
         button=(Button)findViewById(R.id.edit);
         button.setOnClickListener(v -> {
             Intent intent = new Intent();

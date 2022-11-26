@@ -27,6 +27,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
     FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient> adapter;
     DatabaseReference DataRef,DataRef2;
     final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
