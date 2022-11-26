@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.example.myapplication55.model.PatientModel;
+import com.example.myapplication55.model.TherapistModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -50,18 +51,21 @@ public class TherapistSignup extends FirebaseAuthMethods {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             final String uid=FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            PatientModel patientModel=new PatientModel();
-                            patientModel.pname=name;
-                            patientModel.gender=gender;
-                            patientModel.email=email;
-                            patientModel.uid=uid;
-                            patientModel.age="-";
-                            patientModel.city="-";
-                            patientModel.state="-";
-                            patientModel.street="-";
-                            patientModel.phone="-";
-                            patientModel.condition="-";
-                            setupProfile(name);
+                            TherapistModel therapistModel=new TherapistModel();
+                            therapistModel.uid=uid;
+                            therapistModel.name=name;
+                            therapistModel.e_mail=email;
+                            therapistModel.city="-";
+                            therapistModel.state="-";
+                            therapistModel.street="-";
+                            therapistModel.phone="-";
+                            therapistModel.beingtime="-";
+                            therapistModel.number="0";
+                            therapistModel.score="-";
+                            therapistModel.feedback="-";
+                            therapistModel.description="-";
+                            therapistModel.workinghours1="0:00";
+                            therapistModel.workinghours2="24:00";
                             //sign in success
                             Log.d(TAG,"createUserWithEmail:success");
                             FirebaseUser user = myAuth.getCurrentUser();
@@ -71,7 +75,7 @@ public class TherapistSignup extends FirebaseAuthMethods {
                             Intent intent = null;
                             intent = new Intent(TherapistSignup.this, Therapist_HomePage_Activity.class);
                             startActivity(intent);
-                            FirebaseDatabase.getInstance().getReference().child("therapist").child(uid).setValue(patientModel);
+                            FirebaseDatabase.getInstance().getReference().child("therapist").child(uid).setValue(therapistModel);
                         }
                         else{
                             //sign in fails

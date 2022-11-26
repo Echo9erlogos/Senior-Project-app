@@ -25,7 +25,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     FirebaseRecyclerOptions<appointmentinfodisplayPatient> options;
     FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient> adapter;
-    DatabaseReference DataRef,DataRef2;
+    DatabaseReference DataRef,DataRef2,DataRef3;
     final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     @Override
@@ -85,6 +85,8 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
                         DataRef.removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(model.getTherapistuid()).child(uid);
                         DataRef2.removeValue();
+                        DataRef3=FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(model.getTherapistuid()).child(uid);
+                        DataRef3.removeValue();
                     }
                 });
             }

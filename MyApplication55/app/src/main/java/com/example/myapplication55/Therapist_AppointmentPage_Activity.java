@@ -95,6 +95,7 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         HashMap hashMap=new HashMap();
                         hashMap.put("state","be rejected");
                         DataRef2.updateChildren(hashMap);
+                        startActivity(new Intent(Therapist_AppointmentPage_Activity.this,Therapist_HomePage_Activity.class));
                     }
                 });
                 holder.confirm.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +117,7 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         HashMap hashMap=new HashMap();
                         hashMap.put("state","be accepted");
                         DataRef2.updateChildren(hashMap);
+                        startActivity(new Intent(Therapist_AppointmentPage_Activity.this,Therapist_PatientPage_Activity.class));
                     }
                 });
             }

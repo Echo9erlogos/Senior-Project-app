@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
     ConstraintLayout viewPageButtons;
-    TextView tname, experience, description, address1, address2, contact1, contact2;
+    TextView tname, experience, description, address1, address2, contact1, contact2, workinghours1, workinghours2;
     DatabaseReference ref;
     Button back, schedule;
 
@@ -36,6 +36,8 @@ public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
         address2 = findViewById(R.id.textView30);
         contact1 = findViewById(R.id.textView35);
         contact2 = findViewById(R.id.textView36);
+        workinghours1=findViewById(R.id.workinghours1);
+        workinghours2=findViewById(R.id.workinghours2);
         ref = FirebaseDatabase.getInstance().getReference().child("therapist");
 
         String therapistKey = getIntent().getStringExtra("therapistKey");
@@ -44,20 +46,26 @@ public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    String exp = snapshot.child("experience").getValue().toString();
+                    String exp = snapshot.child("feedback").getValue().toString();
                     String des = snapshot.child("description").getValue().toString();
                     String therapistname = snapshot.child("name").getValue().toString();
-                    String address3 = snapshot.child("smalladdress").getValue().toString();
-                    String address4 = snapshot.child("bigaddress").getValue().toString();
+                    String address3 = snapshot.child("street").getValue().toString();
+                    String address4 = snapshot.child("city").getValue().toString();
+                    String address5 = snapshot.child("state").getValue().toString();
+                    String bigaddress=address4+", "+address5;
                     String contact3 = snapshot.child("phone").getValue().toString();
                     String contact4 = snapshot.child("e_mail").getValue().toString();
+                    String hours1=snapshot.child("workinghours1").getValue().toString();
+                    String hours2=snapshot.child("workinghours2").getValue().toString();
                     tname.setText(therapistname);
                     experience.setText(exp);
                     description.setText(des);
                     address1.setText(address3);
-                    address2.setText(address4);
+                    address2.setText(bigaddress);
                     contact1.setText(contact3);
                     contact2.setText(contact4);
+                    workinghours1.setText(hours1);
+                    workinghours2.setText(hours2);
                 }
             }
 

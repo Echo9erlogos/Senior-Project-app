@@ -26,7 +26,6 @@ public class EditPatientProfilePage extends AppCompatActivity {
     private EditText state;
     private EditText street;
     private EditText phone;
-    private EditText email;
     private EditText birth;
     private EditText condition;
     private DatabaseReference rootDatabaseref;
