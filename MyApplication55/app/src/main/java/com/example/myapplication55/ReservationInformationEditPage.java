@@ -108,7 +108,7 @@ send.setOnClickListener(new View.OnClickListener() {
         appointmentInfos.therapistname=therapistname;
         appointmentInfos.state="pending";
         FirebaseDatabase.getInstance().getReference().child("patientappointment").child(uid).setValue(appointmentInfos);
-        FirebaseDatabase.getInstance().getReference().child("docappointment").child(therapistKey).setValue(appointmentInfos);
+        FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(therapistKey).setValue(appointmentInfos);
         startActivity(new Intent(ReservationInformationEditPage.this,Patient_TherapistPage_Activity.class));
     }
 });
