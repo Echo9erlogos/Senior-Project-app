@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +41,6 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
         DataRef= FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(uid);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         mRecyclerView.setHasFixedSize(true);
-
         LoadData();
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
@@ -176,7 +176,7 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
             @NonNull
             @Override
             public DisplayAdapterPending onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.patient_appointment_state, parent, false);
+                View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.therapist_pending_appointment, parent, false);
                 return new DisplayAdapterPending(v);
             }
         };
