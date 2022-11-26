@@ -1,16 +1,17 @@
 package com.example.myapplication55;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+
 import android.content.Context;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -80,7 +81,8 @@ public class welcome extends AppCompatActivity {
         if(currUser != null){
             Log.d(TAG, "signINWithEmail:success____________________________________");
             //reload(); here just load to homepage with user data might move this to an earlier screen as having the app check here is not useful tbh
-            startActivity(new Intent(welcome.this, Patient_HomePage_Activity.class));
+            myAuth.signOut();
+            startActivity(new Intent(welcome.this, LoginPage.class));
         }
     }
     private int getItem(int i) {

@@ -7,4 +7,9 @@ public class appointmentInfos {
     public String therapistuid;
     public String therapistname;
     public String state;
+    public String patientname;
+    public String address;
+    public String phone;
+    public String email;
+    public String condition;
 }

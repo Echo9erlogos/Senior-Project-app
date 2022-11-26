@@ -25,7 +25,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     FirebaseRecyclerOptions<appointmentinfodisplayPatient> options;
     FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient> adapter;
-    DatabaseReference DataRef;
+    DatabaseReference DataRef,DataRef2;
     final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,21 +76,23 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
         adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient>(options) {
             @Override
             protected void onBindViewHolder(@NonNull DisplayAdapterPatient holder, int position, @NonNull appointmentinfodisplayPatient model) {
-                holder.textname.setText(model.getName());
+                holder.textname.setText(model.getTherapistname());
                 holder.textstate.setText(model.getState());
-                /*holder.cancel.setOnClickListener(new View.OnClickListener() {
+                holder.cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         DataRef.removeValue();
+                        DataRef2=FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(model.getTherapistuid()).child(uid);
+                        DataRef2.removeValue();
                     }
-                });*/
+                });
             }
 
             @NonNull
             @Override
             public DisplayAdapterPatient onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.patient_appointment_state, parent, false);
-                return null;
+                return new DisplayAdapterPatient(v);
             }
         };
         adapter.startListening();
