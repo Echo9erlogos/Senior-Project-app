@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/windows_background"
     android:layout_height="wrap_content">
 
     <TextView
@@ -12,6 +13,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:text="patient name"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,6 +25,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="date"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -32,6 +37,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="time"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toEndOf="@+id/date"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -41,7 +48,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:text="Appointment Time :"
+        android:text="Appointment Time : "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patient_address" />
 
@@ -52,6 +62,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="address"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patient_name" />
 
@@ -70,7 +82,7 @@
         android:id="@+id/reject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
         android:text="reject"
         android:textSize="10sp"
@@ -83,7 +95,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:text="patient contact information:"
+        android:text="Patient Contact Information: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
@@ -94,6 +109,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="phone"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
@@ -104,6 +121,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="email"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone" />
 
@@ -113,7 +132,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:text="Condition"
+        android:text="Condition: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -124,6 +146,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="conditon"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 

@@ -88,7 +88,7 @@ public class Patient_View_TherapistInfo_Activity extends AppCompatActivity {
                 Intent intent = null;
                 String therapistname = tname.getText().toString();
                 intent = new Intent(Patient_View_TherapistInfo_Activity.this, ReservationInformationEditPage.class);
-                intent.putExtra("therapistKey", therapistKey);
+                intent.putExtra("therapistKeyinfo", therapistKey);
                 intent.putExtra("therapistname", therapistname);
                 startActivity(intent);
             }

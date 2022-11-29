@@ -45,7 +45,7 @@ public class ReservationInformationEditPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservation_information_edit_page);
-        String therapistKey=getIntent().getStringExtra("therapistKey");
+        String therapistKey=getIntent().getStringExtra("therapistKeyinfo");
         String therapistname=getIntent().getStringExtra("therapistname");
 
         viewPageButtons = findViewById(R.id.buttonlists);

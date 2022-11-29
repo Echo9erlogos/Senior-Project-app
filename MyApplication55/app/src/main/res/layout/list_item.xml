@@ -14,7 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
-        android:text="City:"
+        android:text="City: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -24,6 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         android:text="name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
@@ -34,6 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -44,7 +51,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Score:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="Score: "
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/city"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -54,6 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/textView29"
         app:layout_constraintTop_toBottomOf="@+id/name" />
