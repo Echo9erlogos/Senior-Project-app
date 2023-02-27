@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="cyan_blue">#03DAC6</color>
+    <color name="darkGray">#333533</color>
+    <color name="darkorange">#DE9B0B</color>
+    <color name="lavender_purple">#6574CF</color>
+    <color name="lightGray">#EEE</color>
+    <color name="light_gray">#DADBE2</color>
+    <color name="light_lavender_purple">#6D7BD1</color>
+    <color name="lightgrey">#EAEAEA</color>
+    <color name="orange">#FFB20C</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="welcome_bg1">#7FE1F9</color>
+    <color name="welcome_bg2">#63CFF6</color>
+    <color name="welcome_bg3">#4DBFF1</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">My Application55</string>
+    <string name="default_web_client_id" translatable="false">479914938859-t8qpckd5ntnkeaku6koa5rbgbmq9grs2.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://phys-therapy-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">479914938859</string>
+    <string name="google_api_key" translatable="false">AIzaSyBdOeDz7zbYt0_RcFcFQvL-h2d7XASdYok</string>
+    <string name="google_app_id" translatable="false">1:479914938859:android:0fd046dbfdc2319855c9ae</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBdOeDz7zbYt0_RcFcFQvL-h2d7XASdYok</string>
+    <string name="google_storage_bucket" translatable="false">phys-therapy.appspot.com</string>
+    <string name="next">NEXT</string>
+    <string name="project_id" translatable="false">phys-therapy</string>
+    <string name="skip">SKIP</string>
+    <string name="start">SOUNDS GOOD</string>
+    <style name="Theme.MyApplication55" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

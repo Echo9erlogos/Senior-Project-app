@@ -1,0 +1,330 @@
+[
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_therapist_appointment_in_progress.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\therapist_appointment_in_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_iicon.jpg.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\iicon.jpg"
+    },
+    {
+        "merged": "com.example.myapplication55.app-merged_res-35:/layout_list_item.xml.flat",
+        "source": "com.example.myapplication55.app-main-37:/layout/list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_appointment_unpressed.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\appointment_unpressed.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_confirmationpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_confirmationpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_therapist_pending_appointment.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\therapist_pending_appointment.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_patientpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_patientpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_signup.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_twotone_date_range_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_twotone_date_range_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_logowhite.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\logowhite.png"
+    },
+    {
+        "merged": "com.example.myapplication55.app-merged_res-35:/layout_therapist_pending_appointment.xml.flat",
+        "source": "com.example.myapplication55.app-main-37:/layout/therapist_pending_appointment.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_one_star.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\one_star.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_homepage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_homepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_baseline_password_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_baseline_password_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_twotone_local_phone_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_twotone_local_phone_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_welcome.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_profile_unpressed.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\profile_unpressed.png"
+    },
+    {
+        "merged": "com.example.myapplication55.app-merged_res-35:/layout_patient_appointment_state.xml.flat",
+        "source": "com.example.myapplication55.app-main-37:/layout/patient_appointment_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_twotone_location_on_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_twotone_location_on_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_therapist_background.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\therapist_background.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_signupchoice.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_signupchoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_descriptionpage3.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_descriptionpage3.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_view_therapistinfo.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_view_therapistinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_dot1.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\dot1.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_login_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_reservation_information_edit_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_reservation_information_edit_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\menu_patient_navigation.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\menu\\patient_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_chatpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_chatpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_baseline_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_logo_blank.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\logo_blank.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable-v24_windows_background.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable-v24\\windows_background.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_homepage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_homepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_profile_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_profile_page.xml"
+    },
+    {
+        "merged": "com.example.myapplication55.app-merged_res-35:/layout_therapist_appointment_in_progress.xml.flat",
+        "source": "com.example.myapplication55.app-main-37:/layout/therapist_appointment_in_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable-v24_star.jpg.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable-v24\\star.jpg"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_descriptionpage2.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_descriptionpage2.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_introductory.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_introductory.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_edit_therapist_prifile_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_edit_therapist_prifile_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_chat_unpressed.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\chat_unpressed.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_appointmentpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_appointmentpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_frame1.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\frame1.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_patient_therapistpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_patient_therapistpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_dot2.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\dot2.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_logoblank.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\logoblank.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_therapist_unpressed.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\therapist_unpressed.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_signup.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_appointmentpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_appointmentpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_windows_background2.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\windows_background2.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_profile_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_profile_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_background.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_half_star.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\half_star.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_therapist_chatpage.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_therapist_chatpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_twotone_email_24.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_twotone_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\menu_therapist_navigation.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\menu\\therapist_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_edit_patient_profile_page.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_edit_patient_profile_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_activity_descriptionpage1.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\activity_descriptionpage1.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_therapistlogo.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\therapistlogo.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_selector.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_therapist_logo.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\therapist_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_empty_star.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\empty_star.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\layout_patient_appointment_state.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\layout\\patient_appointment_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_home_unpressed.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\home_unpressed.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_dot3.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\dot3.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_navi_back.png.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\navi_back.png"
+    },
+    {
+        "merged": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-merged_res-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\andre\\.gradle\\daemon\\7.4\\com.example.myapplication55.app-main-37:\\drawable\\ic_launcher_background.xml"
+    }
+]
