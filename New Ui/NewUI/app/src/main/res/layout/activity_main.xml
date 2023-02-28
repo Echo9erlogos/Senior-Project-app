@@ -37,8 +37,8 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="250dp"
+            android:layout_width="190dp"
+            android:layout_height="218dp"
             android:layout_margin="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
@@ -68,8 +68,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="207dp"
-            android:layout_height="260dp"
+            android:layout_width="191dp"
+            android:layout_height="232dp"
             android:layout_margin="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
@@ -82,15 +82,15 @@
                 android:id="@+id/makeanappointment"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:contentDescription=""
                 android:src="@drawable/makeanappointment" />
 
             <TextView
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:layout_height="35dp"
-                android:layout_gravity="bottom|center_horizontal"
+                android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Schedule an appointment "
