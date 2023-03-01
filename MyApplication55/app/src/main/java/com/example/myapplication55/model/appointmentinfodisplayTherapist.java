@@ -9,9 +9,11 @@ public class appointmentinfodisplayTherapist {
     private String phone;
     private String email;
     private String condition;
+    private String paymentstatus;
+    private String paymentamount;
     public appointmentinfodisplayTherapist(){}
 
-    public appointmentinfodisplayTherapist(String patientuid, String patientname, String address, String date, String time, String phone, String email, String condition) {
+    public appointmentinfodisplayTherapist(String patientuid, String patientname, String address, String date, String time, String phone, String email, String condition, String status, String amount) {
         this.patientuid = patientuid;
         this.patientname = patientname;
         this.address = address;
@@ -20,6 +22,8 @@ public class appointmentinfodisplayTherapist {
         this.phone = phone;
         this.email = email;
         this.condition = condition;
+        this.paymentstatus = status;
+        this.paymentamount = amount;
     }
 
     public String getPatientuid() {
@@ -84,5 +88,21 @@ public class appointmentinfodisplayTherapist {
 
     public void setCondition(String condition) {
         this.condition = condition;
+    }
+
+    public String getpaymentstatus() {
+        return paymentstatus;
+    }
+
+    public void setpaymentstatus(String paymentstatus) {
+        this.paymentstatus = paymentstatus;
+    }
+
+    public String getpaymentamount() {
+        return paymentamount;
+    }
+
+    public void setpaymentamount(String paymentamount) {
+        this.paymentamount = paymentamount;
     }
 }

@@ -12,4 +12,6 @@ public class appointmentInfos {
     public String phone;
     public String email;
     public String condition;
+    public String paymentstatus;
+    public String paymentamount;
 }

@@ -18,6 +18,7 @@ public class DisplayAdapterTherapist extends RecyclerView.ViewHolder {
     public TextView textemail;
     public TextView textcondition;
     public Button cancel;
+    public Button request;
 
     public View v;
     public DisplayAdapterTherapist(@NonNull View itemView) {
@@ -31,5 +32,6 @@ public class DisplayAdapterTherapist extends RecyclerView.ViewHolder {
         textemail=itemView.findViewById(R.id.email);
         textcondition=itemView.findViewById(R.id.condition);
         cancel=itemView.findViewById(R.id.cancel);
+        request=itemView.findViewById(R.id.request);
     }
 }

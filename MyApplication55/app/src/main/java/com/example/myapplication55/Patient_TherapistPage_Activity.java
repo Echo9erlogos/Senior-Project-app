@@ -73,6 +73,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
     }
 
     private void LoadData() {
+        String state="waiting for payment";
         options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayPatient>().setQuery(DataRef,appointmentinfodisplayPatient.class).build();
         adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient>(options) {
             @Override
@@ -87,6 +88,18 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
                         DataRef2.removeValue();
                         DataRef3=FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(model.getTherapistuid()).child(uid);
                         DataRef3.removeValue();
+                    }
+                });
+                holder.textstate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(state.equals(model.getState())){
+                            Intent intent = new Intent(Patient_TherapistPage_Activity.this, PatientPaymentPageActivity.class);
+                            intent.putExtra("amount",model.getpaymentamount());
+                            intent.putExtra("therapistuid", model.getTherapistuid());
+                            intent.putExtra("therapistname", model.getTherapistname());
+                            startActivity(intent);
+                        }
                     }
                 });
             }

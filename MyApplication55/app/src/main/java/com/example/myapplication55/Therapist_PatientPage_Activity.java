@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -94,6 +95,20 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
                         HashMap hashMap=new HashMap();
                         hashMap.put("state","be Canceled");
                         DataRef2.updateChildren(hashMap);
+                    }
+                });
+                holder.request.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String status="0";
+                        if(status.equals(model.getpaymentstatus())) {
+                            Intent intent = new Intent(Therapist_PatientPage_Activity.this, Therapist_RequestPage.class);
+                            intent.putExtra("patientuid", model.getPatientuid());
+                            intent.putExtra("patientname", model.getPatientname());
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(Therapist_PatientPage_Activity.this,"You have sent a request to "+model.getPatientname()+" for the amount: "+model.getpaymentamount(),Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }
