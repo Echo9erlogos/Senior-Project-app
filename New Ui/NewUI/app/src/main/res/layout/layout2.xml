@@ -36,7 +36,7 @@
             android:id="@+id/mainGrid"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
+            android:layout_weight="6"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
@@ -65,8 +65,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="267dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="164dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/myappointment" />
 
@@ -76,7 +76,7 @@
                         android:text="My Appointment"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -103,8 +103,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="258dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="142dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/makeanappointment" />
 
@@ -114,7 +114,7 @@
                         android:text="Make an appointment"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -144,8 +144,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="251dp"
+                        android:layout_width="127dp"
+                        android:layout_height="152dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/exericseicon" />
 
@@ -182,8 +182,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="257dp"
+                        android:layout_width="115dp"
+                        android:layout_height="165dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/chaticon" />
 
@@ -223,8 +223,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="288dp"
+                        android:layout_width="143dp"
+                        android:layout_height="174dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/profileicon" />
 
@@ -261,8 +261,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="228dp"
+                        android:layout_width="123dp"
+                        android:layout_height="181dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/settingsicon" />
 
