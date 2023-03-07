@@ -40,36 +40,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
 
         LoadData();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.patient_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.patient_navigation_therapist);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.patient_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Patient_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Patient_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_therapist:
-                        return true;
-                    case R.id.patient_navigation_appointment:
-                        startActivity(new Intent(getApplicationContext(), Patient_AppointmentPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_profile:
-                        startActivity(new Intent(getApplicationContext(), Patient_ProfilePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
     private void LoadData() {

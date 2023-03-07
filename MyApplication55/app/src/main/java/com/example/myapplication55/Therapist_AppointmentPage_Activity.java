@@ -43,36 +43,7 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         LoadData();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.therapist_navigation_appointment);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.therapist_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Therapist_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_patient:
-                        startActivity(new Intent(getApplicationContext(), Therapist_PatientPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_appointment:
-                        return true;
-                    case R.id.therapist_navigation_profile:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ProfilePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
     private void LoadData() {
