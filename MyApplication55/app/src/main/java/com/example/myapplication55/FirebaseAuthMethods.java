@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class FirebaseAuthMethods extends AppCompatActivity {
-    private FirebaseAuth myAuth;
+
 
 
     private static final String TAG = "__FirebaseAuthMethods__";
@@ -59,6 +59,10 @@ public class FirebaseAuthMethods extends AppCompatActivity {
                         }
                     }
                 });
+        twoSecTimer();
+    }
+    //end of setup Profile
+    public void twoSecTimer(){
         try{
             Thread.sleep(2000);
         }
@@ -66,14 +70,28 @@ public class FirebaseAuthMethods extends AppCompatActivity {
 
         }
     }
-    //end of setup Profile
-
     //get users name
     public String getNameFBAuth(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
             return user.getDisplayName();
         }
-        return"Null";
+        return"";
+    }
+
+    //EmailVerification
+    public void sendEmailVerification() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        if (user != null) {
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Log.d(TAG, "-------Email Sent------");
+                    }
+                }
+            });
+        }
     }
 }

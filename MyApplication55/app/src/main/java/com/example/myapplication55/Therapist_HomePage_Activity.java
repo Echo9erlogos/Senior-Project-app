@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Therapist_HomePage_Activity extends AppCompatActivity {
+public class Therapist_HomePage_Activity extends FirebaseAuthMethods{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,7 @@ public class Therapist_HomePage_Activity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.therapist_navigation_home);
-
+        setName();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
@@ -46,5 +47,10 @@ public class Therapist_HomePage_Activity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    TextView nameText;
+    public void setName(){
+        nameText = findViewById(R.id.textView23);
+        nameText.setText("Hi "+getNameFBAuth());
     }
 }

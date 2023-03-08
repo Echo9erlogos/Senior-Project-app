@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <EditText
+        android:id="@+id/SMScode"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="SMS Code"
+        android:padding="20dp"
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintVertical_bias=".5"
+
+        tools:layout_editor_absoluteY="212dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/GetPhoneNumber"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:onClick="verifyAccount"
+        android:text="Verify"
+
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SMScode" />
+</androidx.constraintlayout.widget.ConstraintLayout>

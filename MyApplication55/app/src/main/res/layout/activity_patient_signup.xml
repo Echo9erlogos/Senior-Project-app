@@ -66,6 +66,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname"
         />
+
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:drawablePadding="20dp"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender"
+        />
     <EditText
         android:id="@+id/email"
         android:layout_height="wrap_content"
@@ -79,7 +96,7 @@
         android:textColorHint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
         />
 
     <EditText

@@ -62,6 +62,6 @@ public class Patient_HomePage_Activity extends FirebaseAuthMethods{
     */
     public void setName(){
         nameText = findViewById(R.id.UserWelcome);
-        nameText.setText("Hi");
+        nameText.setText("Hi "+getNameFBAuth());
     }
 }

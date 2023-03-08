@@ -23,8 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.IOException;
 
 public class PatientSignup extends FirebaseAuthMethods {
-    String email, password, name,gender,repass;
-    EditText emailInput, passwordInput, nameInput, genderInput, repassInput;
+    String email, password, name,gender,repass, phoneNum;
+    EditText emailInput, passwordInput, nameInput, genderInput, repassInput, phoneNumInput;
     TextView errorText;
 
     //start auth
@@ -71,9 +71,12 @@ public class PatientSignup extends FirebaseAuthMethods {
                             FirebaseUser user = myAuth.getCurrentUser();
                             //updateUI(user);
 
+                            sendEmailVerification();
+
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(PatientSignup.this, Patient_HomePage_Activity.class);
+                            intent = new Intent(PatientSignup.this, Check_Email_Verification.class);
+                            intent.putExtra("Phone Number",phoneNum);
                             startActivity(intent);
                             FirebaseDatabase.getInstance().getReference().child("patient").child(uid).setValue(patientModel);
                         }
@@ -97,6 +100,7 @@ public class PatientSignup extends FirebaseAuthMethods {
         genderInput = findViewById(R.id.gender);
         repassInput = findViewById(R.id.repassword);
         errorText = findViewById(R.id.bannerDescription);
+        phoneNumInput =findViewById(R.id.PhoneNumber);
 
         //convert amd save to local vars
         email = emailInput.getText().toString();
@@ -104,6 +108,7 @@ public class PatientSignup extends FirebaseAuthMethods {
         repass = repassInput.getText().toString();
         name = nameInput.getText().toString();
         gender = genderInput.getText().toString();
+        phoneNum = phoneNumInput.getText().toString();
 
         //check if password is valid/matches
         if(!password.equals(repass)){

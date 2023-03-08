@@ -69,7 +69,10 @@ public class TherapistSignup extends FirebaseAuthMethods {
                             //sign in success
                             Log.d(TAG,"createUserWithEmail:success");
                             FirebaseUser user = myAuth.getCurrentUser();
+                            setupProfile(name);
                             //updateUI(user);
+
+                            sendEmailVerification();
 
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
