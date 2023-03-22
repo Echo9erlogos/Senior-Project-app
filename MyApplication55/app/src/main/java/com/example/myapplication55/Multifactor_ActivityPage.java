@@ -3,8 +3,10 @@ package com.example.myapplication55;
 import static android.content.ContentValues.TAG;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,10 +18,12 @@ import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.MultiFactorAssertion;
 import com.google.firebase.auth.MultiFactorSession;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.auth.PhoneMultiFactorGenerator;
 
 import java.util.concurrent.TimeUnit;
 import android.view.View;
@@ -27,17 +31,17 @@ import android.view.View;
 public class Multifactor_ActivityPage extends FirebaseAuthMethods {
     private String phoneNum;
     private String verifyCode;
-
+    private PhoneAuthOptions phoneAuthOptions;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
 
 
-    private TextView phoneNumInput;
-    //gets phone number form user and add it to their account
+    private String mverificationId;
+    private PhoneAuthCredential mcredential;
+    private PhoneAuthProvider.ForceResendingToken mforceResendingToken;
+
 
     //get the sms code and verify account
-    public void verifyAccount(View view){
 
-    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +65,10 @@ public class Multifactor_ActivityPage extends FirebaseAuthMethods {
                             }
                         });
 
-        callbacks =
-                new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                    private PhoneAuthProvider.ForceResendingToken forceResendingToken;
-                    private String verificationId;
-                    private PhoneAuthCredential credential;
+        callbacks =  new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                    //private PhoneAuthProvider.ForceResendingToken forceResendingToken;
+                    //private String verificationId;
+                    //private PhoneAuthCredential credential;
 
                     @Override
                     public void onVerificationCompleted(PhoneAuthCredential credential) {
@@ -79,7 +82,7 @@ public class Multifactor_ActivityPage extends FirebaseAuthMethods {
                         // 2) Auto-retrieval. On some devices, Google Play services can
                         //    automatically detect the incoming verification SMS and perform
                         //    verification without user action.
-                        this.credential = credential;
+                        mcredential = credential;
                     }
                     @Override
                     public void onVerificationFailed(FirebaseException e) {
@@ -102,21 +105,54 @@ public class Multifactor_ActivityPage extends FirebaseAuthMethods {
                         // credential by combining the code with a verification ID.
                         // Save the verification ID and resending token for later use.
                         Log.d(TAG,"----------------SMS:success--------------");
-                        this.verificationId = verificationId;
-                        this.forceResendingToken = token;
+                        mverificationId = verificationId;
+                        mforceResendingToken = token;
                         // ...
                     }
                 };
 
-        PhoneAuthOptions phoneAuthOptions =
+                phoneAuthOptions =
                 PhoneAuthOptions.newBuilder()
                         .setPhoneNumber("+1 " +phoneNum)
                         .setTimeout(30L, TimeUnit.SECONDS)
                         .setActivity(this)
                         .setCallbacks(callbacks)
                         .build();
-//.setMultiFactorSession(multiFactorSession)
+                        //setMultiFactorSession(multiFactorSession)
+
+                sendVerifyCode();
+                //setContentView(R.layout.activity_verify_account);
+    }
+
+    public void verifyAccount(View view){
+
+        EditText smsCode = findViewById(R.id.SMScode);
+        String mverifyCode = smsCode.getText().toString();
+
+        PhoneAuthCredential credential =
+                PhoneAuthProvider.getCredential(mverificationId, mverifyCode);
+
+        MultiFactorAssertion multiFactorAssertion = PhoneMultiFactorGenerator.getAssertion(credential);
+// Complete enrollment.
+        FirebaseAuth.getInstance()
+                .getCurrentUser()
+                .getMultiFactor()
+                .enroll(multiFactorAssertion, "My personal phone number")
+                .addOnCompleteListener(
+                        new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Intent intent = null;
+                                intent = new Intent(Multifactor_ActivityPage.this, Patient_HomePage_Activity.class);
+
+                                startActivity(intent);
+                            }
+                        });
+    }
+    public void sendVerifyCode(){
         PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
-        //setContentView(R.layout.activity_verify_account);
+    }
+    public void sendVerifyCode(View view){
+        PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
     }
 }
