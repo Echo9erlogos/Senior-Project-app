@@ -79,7 +79,7 @@ public class Patient_Rating_Page_Activity extends AppCompatActivity {
                                 rootDatabaseref.updateChildren(hashMap);
                                 Intent intent = new Intent();
                                 intent.setClass(Patient_Rating_Page_Activity.this, Patient_HomePage_Activity.class);
-                                Toast.makeText(Patient_Rating_Page_Activity.this,"Rating: "+String.valueOf(rating),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Patient_Rating_Page_Activity.this,"thanks for your cooperation",Toast.LENGTH_SHORT).show();
                                 startActivity(intent);
                             }
                         });
