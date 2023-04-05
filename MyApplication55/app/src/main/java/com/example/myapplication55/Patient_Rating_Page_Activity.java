@@ -69,7 +69,7 @@ public class Patient_Rating_Page_Activity extends AppCompatActivity {
                                 number++;
                                 score=score/number;
                                 ufeedback=feedback.getText().toString();
-                                nfeedback=rfeedback+"\n\n"+ufeedback;
+                                nfeedback=rfeedback+ufeedback+"\n\n";
                                 String inputnumber=String.valueOf(number);
                                 String inputscore=String.valueOf(score);
                                 HashMap hashMap=new HashMap();
