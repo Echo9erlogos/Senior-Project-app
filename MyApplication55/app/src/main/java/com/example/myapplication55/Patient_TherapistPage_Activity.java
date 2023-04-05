@@ -54,6 +54,7 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
                 holder.cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        DataRef=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(uid).child(model.getTherapistuid());
                         DataRef.removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(model.getTherapistuid()).child(uid);
                         DataRef2.removeValue();

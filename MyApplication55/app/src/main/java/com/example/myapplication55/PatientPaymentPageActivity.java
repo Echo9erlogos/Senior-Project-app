@@ -45,7 +45,9 @@ public class PatientPaymentPageActivity extends AppCompatActivity {
                     hashMap.put("state", "Paid");
                     DataRef.updateChildren(hashMap);
                     Intent intent = new Intent();
-                    intent.setClass(PatientPaymentPageActivity.this,Patient_TherapistPage_Activity.class);
+                    intent.setClass(PatientPaymentPageActivity.this,Patient_Rating_Page_Activity.class);
+                    intent.putExtra("therapistuid", therapistuid);
+                    intent.putExtra("therapistname", therapistname);
                     startActivity(intent);
                 }else{
                     Toast.makeText(PatientPaymentPageActivity.this,"Please tick",Toast.LENGTH_SHORT).show();
