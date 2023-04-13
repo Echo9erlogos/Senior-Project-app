@@ -19,6 +19,7 @@ public class DisplayAdapterTherapist extends RecyclerView.ViewHolder {
     public TextView textcondition;
     public Button cancel;
     public Button request;
+    public Button advice;
 
     public View v;
     public DisplayAdapterTherapist(@NonNull View itemView) {
@@ -33,5 +34,6 @@ public class DisplayAdapterTherapist extends RecyclerView.ViewHolder {
         textcondition=itemView.findViewById(R.id.condition);
         cancel=itemView.findViewById(R.id.cancel);
         request=itemView.findViewById(R.id.request);
+        advice=itemView.findViewById(R.id.advice);
     }
 }

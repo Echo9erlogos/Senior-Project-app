@@ -82,6 +82,15 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
                         }
                     }
                 });
+                holder.advice.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Therapist_PatientPage_Activity.this, Therapist_StatusPage_Activity.class);
+                        intent.putExtra("patientuid", model.getPatientuid());
+                        intent.putExtra("patientname", model.getPatientname());
+                        startActivity(intent);
+                    }
+                });
             }
 
             @NonNull

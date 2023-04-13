@@ -74,6 +74,15 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
                         }
                     }
                 });
+                holder.status.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Patient_TherapistPage_Activity.this, Patient_StatusPage_Activity.class);
+                        intent.putExtra("weeks",model.getWeeks());
+                        intent.putExtra("advices",model.getAdvice());
+                        startActivity(intent);
+                    }
+                });
             }
 
             @NonNull

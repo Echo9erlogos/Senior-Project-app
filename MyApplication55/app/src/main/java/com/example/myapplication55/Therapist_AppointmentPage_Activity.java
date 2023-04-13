@@ -82,8 +82,12 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         appointmentInfo.phone=model.getPhone();
                         appointmentInfo.email=model.getEmail();
                         appointmentInfo.condition=model.getCondition();
+                        //new stuff
                         appointmentInfo.paymentstatus="0";
                         appointmentInfo.paymentamount="0.00";
+                        appointmentInfo.weeks="-";
+                        appointmentInfo.advice="-";
+
                         FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid).child(model.getPatientuid()).setValue(appointmentInfo);
                         DataRef.child(model.getPatientuid()).removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
