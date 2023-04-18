@@ -3,10 +3,8 @@ package com.example.myapplication55;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication55.Adapters.DisplayAdapterPending;
 import com.example.myapplication55.model.appointmentInfos;
 import com.example.myapplication55.model.appointmentinfodisplayTherapist;
+import com.example.myapplication55.model.patientfriendinfos;
+import com.example.myapplication55.model.therapistfriendinfos;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -73,6 +72,8 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         appointmentInfos appointmentInfo=new appointmentInfos();
+                        patientfriendinfos patientfriendinfo=new patientfriendinfos();
+                        therapistfriendinfos therapistfriendinfo=new therapistfriendinfos();
                         appointmentInfo.date=model.getDate();
                         appointmentInfo.time=model.getTime();
                         appointmentInfo.patientuid=model.getPatientuid();
@@ -89,6 +90,12 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         appointmentInfo.advice="-";
 
                         FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid).child(model.getPatientuid()).setValue(appointmentInfo);
+                        patientfriendinfo.therapistname=model.getTherapistname();
+                        patientfriendinfo.therapistuid=uid;
+                        therapistfriendinfo.patientname=model.getPatientname();
+                        therapistfriendinfo.patientuid=model.getPatientuid();
+                        FirebaseDatabase.getInstance().getReference().child("chats").child(model.getPatientuid()).child(uid).setValue(patientfriendinfo);
+                        FirebaseDatabase.getInstance().getReference().child("chats").child(uid).child(model.getPatientuid()).setValue(therapistfriendinfo);
                         DataRef.child(model.getPatientuid()).removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
                         HashMap hashMap=new HashMap();
