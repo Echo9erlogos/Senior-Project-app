@@ -94,8 +94,8 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         patientfriendinfo.therapistuid=uid;
                         therapistfriendinfo.patientname=model.getPatientname();
                         therapistfriendinfo.patientuid=model.getPatientuid();
-                        FirebaseDatabase.getInstance().getReference().child("chats").child(model.getPatientuid()).child(uid).setValue(patientfriendinfo);
-                        FirebaseDatabase.getInstance().getReference().child("chats").child(uid).child(model.getPatientuid()).setValue(therapistfriendinfo);
+                        FirebaseDatabase.getInstance().getReference().child("friends").child(model.getPatientuid()).child(uid).setValue(patientfriendinfo);
+                        FirebaseDatabase.getInstance().getReference().child("friends").child(uid).child(model.getPatientuid()).setValue(therapistfriendinfo);
                         DataRef.child(model.getPatientuid()).removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
                         HashMap hashMap=new HashMap();

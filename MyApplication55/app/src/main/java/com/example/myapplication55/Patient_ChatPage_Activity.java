@@ -37,7 +37,7 @@ public class Patient_ChatPage_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_patient_chatpage);
 
         mRecyclerView=findViewById(R.id.patientfriendlist);
-        DataRef= FirebaseDatabase.getInstance().getReference().child("chats").child(uid);
+        DataRef= FirebaseDatabase.getInstance().getReference().child("friends").child(uid);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         mRecyclerView.setHasFixedSize(true);
 
@@ -54,6 +54,8 @@ public class Patient_ChatPage_Activity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent=new Intent(Patient_ChatPage_Activity.this, Patient_Message_Activity.class );
+                        intent.putExtra("therapistname", model.getTherapistname());
+                        intent.putExtra("therapistuid", getRef(position).getKey());
                         startActivity(intent);
                     }
                 });

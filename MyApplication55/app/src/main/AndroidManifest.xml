@@ -94,6 +94,12 @@
             android:name=".TherapistSignup"
             android:exported="false" />
         <activity
+            android:name=".Patient_Message_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Therapist_Message_Activity"
+            android:exported="false" />
+        <activity
             android:name=".welcome"
             android:exported="false" />
         <activity
