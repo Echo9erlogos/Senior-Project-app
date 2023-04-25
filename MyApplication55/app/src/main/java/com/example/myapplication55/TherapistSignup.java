@@ -24,8 +24,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.IOException;
 
 public class TherapistSignup extends FirebaseAuthMethods {
-    String email, password, name,gender,repass;
-    EditText emailInput, passwordInput, nameInput, genderInput, repassInput;
+    String email, password, name,gender,repass, phoneNum;
+    EditText emailInput, passwordInput, nameInput, genderInput, repassInput, phoneNumInput;
     TextView errorText;
     private FirebaseAuth myAuth;
     @Override
@@ -76,7 +76,9 @@ public class TherapistSignup extends FirebaseAuthMethods {
 
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(TherapistSignup.this, Therapist_HomePage_Activity.class);
+                            intent = new Intent(TherapistSignup.this, Check_Email_Verification.class);
+                            intent.putExtra("Phone Number",phoneNum);
+                            intent.putExtra("SignUpChoice","therapist");
                             startActivity(intent);
                             FirebaseDatabase.getInstance().getReference().child("therapist").child(uid).setValue(therapistModel);
                         }
@@ -100,6 +102,7 @@ public class TherapistSignup extends FirebaseAuthMethods {
         genderInput = findViewById(R.id.gender);
         repassInput = findViewById(R.id.repassword);
         errorText = findViewById(R.id.bannerDescription);
+        phoneNumInput =findViewById(R.id.PhoneNumber);
 
         //convert amd save to local vars
         email = emailInput.getText().toString();
@@ -107,6 +110,7 @@ public class TherapistSignup extends FirebaseAuthMethods {
         repass = repassInput.getText().toString();
         name = nameInput.getText().toString();
         gender = genderInput.getText().toString();
+        phoneNum = phoneNumInput.getText().toString();
 
         //check if password is valid/matches
         if(!password.equals(repass)){

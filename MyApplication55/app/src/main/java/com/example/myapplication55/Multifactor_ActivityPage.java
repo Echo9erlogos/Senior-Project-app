@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 import android.view.View;
 
 public class Multifactor_ActivityPage extends FirebaseAuthMethods {
-    private String phoneNum;
+    private String phoneNum, signUpChoice;
     private String verifyCode;
     private PhoneAuthOptions phoneAuthOptions;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
@@ -49,6 +49,7 @@ public class Multifactor_ActivityPage extends FirebaseAuthMethods {
 
 
         phoneNum =getIntent().getStringExtra("Phone Number");
+        signUpChoice = getIntent().getStringExtra("SignUpChoice");
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
@@ -143,7 +144,12 @@ public class Multifactor_ActivityPage extends FirebaseAuthMethods {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 Intent intent = null;
-                                intent = new Intent(Multifactor_ActivityPage.this, Patient_HomePage_Activity.class);
+                                if(signUpChoice.equals("patient")){
+                                    intent = new Intent(Multifactor_ActivityPage.this, Patient_HomePage_Activity.class);
+                                }else if(signUpChoice.equals("therapist")){
+                                    intent = new Intent(Multifactor_ActivityPage.this, Therapist_HomePage_Activity.class);
+                                }
+
 
                                 startActivity(intent);
                             }

@@ -77,6 +77,7 @@ public class PatientSignup extends FirebaseAuthMethods {
                             Intent intent = null;
                             intent = new Intent(PatientSignup.this, Check_Email_Verification.class);
                             intent.putExtra("Phone Number",phoneNum);
+                            intent.putExtra("SignUpChoice","patient");
                             startActivity(intent);
                             FirebaseDatabase.getInstance().getReference().child("patient").child(uid).setValue(patientModel);
                         }
