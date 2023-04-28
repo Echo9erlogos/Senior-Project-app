@@ -14,11 +14,13 @@ public class DisplayAdapterPatient extends RecyclerView.ViewHolder {
     public TextView textstate;
     public Button cancel;
     public View v;
+    public Button status;
     public DisplayAdapterPatient(@NonNull View itemView){
         super(itemView);
         textname=itemView.findViewById(R.id.therapist_name);
         textstate=itemView.findViewById(R.id.state);
         cancel=itemView.findViewById(R.id.cancel);
+        status=itemView.findViewById(R.id.status);
         v=itemView;
     }
 }

@@ -61,8 +61,8 @@ public class TherapistSignup extends FirebaseAuthMethods {
                             therapistModel.phone="-";
                             therapistModel.beingtime="-";
                             therapistModel.number="0";
-                            therapistModel.score="-";
-                            therapistModel.feedback="-";
+                            therapistModel.score="-1";
+                            therapistModel.feedback="";
                             therapistModel.description="-";
                             therapistModel.workinghours1="0:00";
                             therapistModel.workinghours2="24:00";

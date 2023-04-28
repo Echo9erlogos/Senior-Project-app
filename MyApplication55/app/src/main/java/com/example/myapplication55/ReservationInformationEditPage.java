@@ -140,6 +140,11 @@ send.setOnClickListener(new View.OnClickListener() {
                 appointmentInfos.state="pending";
                 appointmentInfos.date=datetxt;
 
+                //new stuff
+                appointmentInfos.paymentstatus="0";
+                appointmentInfos.paymentamount="0.00";
+                appointmentInfos.weeks="-";
+                appointmentInfos.advice="-";
 
                 FirebaseDatabase.getInstance().getReference().child("patientappointment").child(uid).child(therapistKey).setValue(appointmentInfos);
                 FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(therapistKey).child(uid).setValue(appointmentInfos);

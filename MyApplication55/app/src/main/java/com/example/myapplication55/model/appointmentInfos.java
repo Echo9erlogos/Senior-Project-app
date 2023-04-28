@@ -12,4 +12,9 @@ public class appointmentInfos {
     public String phone;
     public String email;
     public String condition;
+    //new stuff
+    public String paymentstatus;
+    public String paymentamount;
+    public String weeks;
+    public String advice;
 }

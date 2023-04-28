@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,36 +44,7 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
         LoadData();
 
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.therapist_navigation_patient);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.therapist_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Therapist_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_patient:
-                        return true;
-                    case R.id.therapist_navigation_appointment:
-                        startActivity(new Intent(getApplicationContext(), Therapist_AppointmentPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_profile:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ProfilePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
     private void LoadData() {
         options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayTherapist>().setQuery(DataRef,appointmentinfodisplayTherapist.class).build();
@@ -94,6 +66,29 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
                         HashMap hashMap=new HashMap();
                         hashMap.put("state","be Canceled");
                         DataRef2.updateChildren(hashMap);
+                    }
+                });
+                holder.request.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String status="0";
+                        if(status.equals(model.getpaymentstatus())) {
+                            Intent intent = new Intent(Therapist_PatientPage_Activity.this, Therapist_RequestPage.class);
+                            intent.putExtra("patientuid", model.getPatientuid());
+                            intent.putExtra("patientname", model.getPatientname());
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(Therapist_PatientPage_Activity.this,"You have sent a request to "+model.getPatientname()+" for the amount: "+model.getpaymentamount(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                holder.advice.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Therapist_PatientPage_Activity.this, Therapist_StatusPage_Activity.class);
+                        intent.putExtra("patientuid", model.getPatientuid());
+                        intent.putExtra("patientname", model.getPatientname());
+                        startActivity(intent);
                     }
                 });
             }

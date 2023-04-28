@@ -48,36 +48,7 @@ public class Therapist_ProfilePage_Activity extends FirebaseAuthMethods {
             intent.setClass(Therapist_ProfilePage_Activity.this, EditTherapistProfilePage.class);
             startActivity(intent);
         });
-        BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.therapist_navigation_profile);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.therapist_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Therapist_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_patient:
-                        startActivity(new Intent(getApplicationContext(), Therapist_PatientPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_appointment:
-                        startActivity(new Intent(getApplicationContext(), Therapist_AppointmentPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_profile:
-                        return true;
-                }
-                return false;
-            }
-        });
         name=findViewById(R.id.textView4);
         city=findViewById(R.id.textcity);
         state=findViewById(R.id.textstate);

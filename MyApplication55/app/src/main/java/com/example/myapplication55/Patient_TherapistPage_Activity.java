@@ -40,39 +40,11 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
 
         LoadData();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.patient_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.patient_navigation_therapist);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.patient_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Patient_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Patient_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_therapist:
-                        return true;
-                    case R.id.patient_navigation_appointment:
-                        startActivity(new Intent(getApplicationContext(), Patient_AppointmentPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.patient_navigation_profile:
-                        startActivity(new Intent(getApplicationContext(), Patient_ProfilePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
     private void LoadData() {
+        String state="waiting for payment";
         options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayPatient>().setQuery(DataRef,appointmentinfodisplayPatient.class).build();
         adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayPatient, DisplayAdapterPatient>(options) {
             @Override
@@ -82,11 +54,33 @@ public class Patient_TherapistPage_Activity extends AppCompatActivity {
                 holder.cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        DataRef=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(uid).child(model.getTherapistuid());
                         DataRef.removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("pendingappointment").child(model.getTherapistuid()).child(uid);
                         DataRef2.removeValue();
                         DataRef3=FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(model.getTherapistuid()).child(uid);
                         DataRef3.removeValue();
+                    }
+                });
+                holder.textstate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(state.equals(model.getState())){
+                            Intent intent = new Intent(Patient_TherapistPage_Activity.this, PatientPaymentPageActivity.class);
+                            intent.putExtra("amount",model.getpaymentamount());
+                            intent.putExtra("therapistuid", model.getTherapistuid());
+                            intent.putExtra("therapistname", model.getTherapistname());
+                            startActivity(intent);
+                        }
+                    }
+                });
+                holder.status.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Patient_TherapistPage_Activity.this, Patient_StatusPage_Activity.class);
+                        intent.putExtra("weeks",model.getWeeks());
+                        intent.putExtra("advices",model.getAdvice());
+                        startActivity(intent);
                     }
                 });
             }

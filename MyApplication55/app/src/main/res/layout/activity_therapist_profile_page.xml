@@ -268,12 +268,5 @@
         android:text="signout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textevaluation" />
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/therapist_bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemBackground="@color/white"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/therapist_navigation" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

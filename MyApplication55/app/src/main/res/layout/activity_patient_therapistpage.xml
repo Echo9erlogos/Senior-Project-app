@@ -20,13 +20,4 @@
         android:layout_marginBottom="0dp" />
 
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/patient_bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemBackground="@color/white"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/patient_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

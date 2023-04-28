@@ -3,10 +3,8 @@ package com.example.myapplication55;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication55.Adapters.DisplayAdapterPending;
 import com.example.myapplication55.model.appointmentInfos;
 import com.example.myapplication55.model.appointmentinfodisplayTherapist;
+import com.example.myapplication55.model.patientfriendinfos;
+import com.example.myapplication55.model.therapistfriendinfos;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -43,36 +42,7 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         LoadData();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.therapist_bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.therapist_navigation_appointment);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                switch(menuitem.getItemId()){
-                    case R.id.therapist_navigation_home:
-                        startActivity(new Intent(getApplicationContext(), Therapist_HomePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_chat:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ChatPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_patient:
-                        startActivity(new Intent(getApplicationContext(), Therapist_PatientPage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.therapist_navigation_appointment:
-                        return true;
-                    case R.id.therapist_navigation_profile:
-                        startActivity(new Intent(getApplicationContext(), Therapist_ProfilePage_Activity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
     private void LoadData() {
@@ -102,6 +72,8 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         appointmentInfos appointmentInfo=new appointmentInfos();
+                        patientfriendinfos patientfriendinfo=new patientfriendinfos();
+                        therapistfriendinfos therapistfriendinfo=new therapistfriendinfos();
                         appointmentInfo.date=model.getDate();
                         appointmentInfo.time=model.getTime();
                         appointmentInfo.patientuid=model.getPatientuid();
@@ -111,7 +83,19 @@ public class Therapist_AppointmentPage_Activity extends AppCompatActivity {
                         appointmentInfo.phone=model.getPhone();
                         appointmentInfo.email=model.getEmail();
                         appointmentInfo.condition=model.getCondition();
+                        //new stuff
+                        appointmentInfo.paymentstatus="0";
+                        appointmentInfo.paymentamount="0.00";
+                        appointmentInfo.weeks="-";
+                        appointmentInfo.advice="-";
+
                         FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid).child(model.getPatientuid()).setValue(appointmentInfo);
+                        patientfriendinfo.therapistname=model.getTherapistname();
+                        patientfriendinfo.therapistuid=uid;
+                        therapistfriendinfo.patientname=model.getPatientname();
+                        therapistfriendinfo.patientuid=model.getPatientuid();
+                        FirebaseDatabase.getInstance().getReference().child("friends").child(model.getPatientuid()).child(uid).setValue(patientfriendinfo);
+                        FirebaseDatabase.getInstance().getReference().child("friends").child(uid).child(model.getPatientuid()).setValue(therapistfriendinfo);
                         DataRef.child(model.getPatientuid()).removeValue();
                         DataRef2=FirebaseDatabase.getInstance().getReference().child("patientappointment").child(model.getPatientuid()).child(uid);
                         HashMap hashMap=new HashMap();
