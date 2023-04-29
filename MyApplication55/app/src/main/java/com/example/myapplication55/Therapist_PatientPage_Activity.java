@@ -38,8 +38,6 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_therapist_patientpage);
-        TextView textView = findViewById(R.id.patient_address);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
         mRecyclerView=findViewById(R.id.demandlist);
         DataRef= FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
