@@ -3,7 +3,4 @@
     <string name="next" translatable="false">NEXT</string>
     <string name="skip" translatable="false">SKIP</string>
     <string name="start" translatable="false">SOUNDS GOOD</string>
-    <string name="address_link" translatable="false">Hyperlink TextView</string>
-    <string name="hyperlink" translatable="false">Address: \n<a herf = "https://goo.gl/maps/k3iWe1h1aa9r7mRf6">Toyon Hall - Building 17</a></string>
-
 </resources>
