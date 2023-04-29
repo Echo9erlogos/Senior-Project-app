@@ -3,10 +3,12 @@ package com.example.myapplication55;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,7 +38,8 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_therapist_patientpage);
-
+        TextView textView = findViewById(R.id.patient_address);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
         mRecyclerView=findViewById(R.id.demandlist);
         DataRef= FirebaseDatabase.getInstance().getReference().child("appointmentinprogress").child(uid);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));

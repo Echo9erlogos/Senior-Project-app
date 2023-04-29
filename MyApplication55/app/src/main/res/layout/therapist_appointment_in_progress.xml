@@ -63,7 +63,7 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:textSize="15dp"
-        android:text="address"
+        android:text="@string/hyperlink"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patient_name" />
 
