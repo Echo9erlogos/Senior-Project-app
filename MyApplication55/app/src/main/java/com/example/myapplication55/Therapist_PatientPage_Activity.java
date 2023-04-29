@@ -2,6 +2,7 @@ package com.example.myapplication55;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -48,12 +49,22 @@ public class Therapist_PatientPage_Activity extends AppCompatActivity {
 
     }
     private void LoadData() {
+        String url="https://maps.google.com/?q=";
         options=new FirebaseRecyclerOptions.Builder<appointmentinfodisplayTherapist>().setQuery(DataRef,appointmentinfodisplayTherapist.class).build();
         adapter=new FirebaseRecyclerAdapter<appointmentinfodisplayTherapist, DisplayAdapterTherapist>(options) {
             @Override
             protected void onBindViewHolder(@NonNull DisplayAdapterTherapist holder, int position, @NonNull appointmentinfodisplayTherapist model) {
                 holder.textpatientname.setText(model.getPatientname());
-                holder.textaddress.setText(model.getAddress());
+                holder.textaddress.setMovementMethod(LinkMovementMethod.getInstance());
+                holder.textaddress.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new  Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url+model.getAddress()));
+                        startActivity(intent);
+                    }
+                });
                 holder.textdate.setText(model.getDate());
                 holder.texttime.setText(model.getTime());
                 holder.textphone.setText(model.getPhone());
