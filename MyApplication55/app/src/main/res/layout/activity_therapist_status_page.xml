@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Therapist_StatusPage_Activity">
-
+    <ImageButton
+        android:id="@+id/backhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/home"
+        app:srcCompat="@mipmap/home" />
     <TextView
         android:id="@+id/textView47"
         android:layout_width="wrap_content"

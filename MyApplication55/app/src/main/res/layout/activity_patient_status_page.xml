@@ -63,4 +63,12 @@
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/textView51"
         app:layout_constraintTop_toBottomOf="@+id/textView51" />
+    <ImageButton
+        android:id="@+id/backhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/home"
+        app:srcCompat="@mipmap/home" />
 </androidx.constraintlayout.widget.ConstraintLayout>
