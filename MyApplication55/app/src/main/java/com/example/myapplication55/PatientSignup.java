@@ -75,7 +75,7 @@ public class PatientSignup extends FirebaseAuthMethods {
 
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(PatientSignup.this, Check_Email_Verification.class);
+                            intent = new Intent(PatientSignup.this,Patient_HomePage_Activity.class );//Check_Email_Verification.class
                             intent.putExtra("Phone Number",phoneNum);
                             intent.putExtra("SignUpChoice","patient");
                             startActivity(intent);

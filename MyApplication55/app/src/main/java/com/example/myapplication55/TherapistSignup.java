@@ -76,7 +76,7 @@ public class TherapistSignup extends FirebaseAuthMethods {
 
                             //this is where we update to next screen with user info and profile
                             Intent intent = null;
-                            intent = new Intent(TherapistSignup.this, Check_Email_Verification.class);
+                            intent = new Intent(TherapistSignup.this, Therapist_HomePage_Activity.class);
                             intent.putExtra("Phone Number",phoneNum);
                             intent.putExtra("SignUpChoice","therapist");
                             startActivity(intent);
