@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,12 +21,22 @@ public class Therapist_StatusPage_Activity extends AppCompatActivity {
     EditText weeks;
     EditText advice;
     Button submit;
+    ImageButton home;
     DatabaseReference DataRef,DataRef2;
     final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_therapist_status_page);
+        home=findViewById(R.id.backhome);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent();
+                intent.setClass(Therapist_StatusPage_Activity.this,Therapist_HomePage_Activity.class);
+                startActivity(intent);
+            }
+        });
         String patientname=getIntent().getStringExtra("patientname");
         String patientuid=getIntent().getStringExtra("patientuid");
         name=findViewById(R.id.patientname);

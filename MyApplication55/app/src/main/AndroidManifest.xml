@@ -31,7 +31,7 @@
             android:exported="true" />
         <activity
             android:name=".PatientPaymentPageActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Therapist_RequestPage"
             android:exported="false" />

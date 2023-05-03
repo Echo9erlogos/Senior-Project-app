@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class PatientPaymentPageActivity extends AppCompatActivity {
     TextView amount;
     CheckBox box;
     DatabaseReference DataRef;
+    ImageButton home;
     final String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,15 @@ public class PatientPaymentPageActivity extends AppCompatActivity {
         String therapistname=getIntent().getStringExtra("therapistname");
         String therapistuid=getIntent().getStringExtra("therapistuid");
         String amount1=getIntent().getStringExtra("amount");
+        home=findViewById(R.id.backhome);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent();
+                intent.setClass(PatientPaymentPageActivity.this,Patient_HomePage_Activity.class);
+                startActivity(intent);
+            }
+        });
         pay=findViewById(R.id.pay_button);
         name=findViewById(R.id.therapist_name);
         amount=findViewById(R.id.amount);
